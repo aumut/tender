@@ -1,33 +1,91 @@
 /***************************** general style *****************************/
 *
-	&:focus, &:active
-		outline: none !important
+  &:focus, &:active
+    outline: none !important
 
 html
-	overflow: hidden
-	font-size: $fontSizeMain
+  overflow: hidden
+  font-size: $fontSizeMain
 
 body
-	font:
-		family: $fontSansProSemiBold
-		size: 1em
-		weight: 400
-	color: $fontColorMain
-	line-height: 1
-	//min-width: $bodyMinWidth
-	margin: 0
-	padding: 0
-	height: 100vh
-	background-color: #FFFFFF
-	overflow-y: scroll
-	scroll-behavior: smooth
+  font:
+    family: $fontRobotoReg
+    size: 1em
+    weight: 400
+  color: $fontColorMain
+  line-height: 1
+  //min-width: $bodyMinWidth
+  margin: 0
+  padding: 0
+  height: 100vh
+  background-color: #FFFFFF
+  overflow-y: scroll
+  scroll-behavior: smooth
 
 a
-	text-decoration: none
+  text-decoration: none
 
+h1
+  font-size: $fontSize_h1
+h2
+  font-size: $fontSize_h2
+h3
+  font-size: $fontSize_h3
 h4
-	font-size: $fontSize_h4
-h5
-	font-size: $fontSize_h5
-h6
-	font-size: $fontSize_h6
+  font-size: $fontSize_h4
+
+.title
+  font-family: $fontBebasNeueReg
+  font-weight: normal
+  text-align: left
+  &--bold
+    font-family: $fontBebasNeueBold
+  &--sub
+    font-family: $fontRobotoReg
+
+.btn
+  width: 100%
+  height: auto
+  display: inline-block
+  font-family: $fontRobotoReg
+  font-size: $btn-fs
+  line-height: $btn-lh
+  color: $btn-color
+  text-align: center
+  vertical-align: middle
+  cursor: pointer
+  user-select: none
+  border: $btn-border-width solid transparent
+  background: rgb(254,228,144)
+  background: linear-gradient(180deg, rgba(254,228,144,1) 0%, rgba(250,181,57,1) 100%)
+  +border-radius($btn-border-rad)
+  padding: $btn-pt 0px $btn-pb
+  +box_shadow($btn-shadows)
+  &--ic
+    position: relative
+    padding-right: $btn-ic-pr
+    &:after
+      content: ''
+      position: absolute
+      top: calc(50% - 37px/2)
+      right: 14px
+      background:
+        image: url("../images/ic_fingerprint.png")
+        repeat: no-repeat
+        size: cover
+      width: $btn-ic-width
+      height: $btn-ic-height
+  &__ic
+    position: absolute
+    right: $btn-ic-pr
+    top: $btn-pt
+    height: calc(100% - #{$btn-pt} - #{$btn-pb})
+    width: 1px
+    background-color: #ffe76d
+
+.logo
+  display: inline-block
+  font-size: 35px
+  text-transform: uppercase
+  &__link
+    font-family: $fontBebasNeueBold
