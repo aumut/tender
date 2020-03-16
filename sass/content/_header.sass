@@ -1,3 +1,73 @@
 .header
   +flexbox
-  
+  +justify-content(space-between)
+  +align-items(center)
+  margin-top: $header-mt
+
+.logo
+  display: inline-block
+  font-size: $logo-fs
+  text-transform: uppercase
+  &__link
+    font-family: $fontBebasNeueBold
+    &:hover
+      text-decoration: none
+  &__text--blue
+    color: #009bf9
+  &__text--grey
+    color: #010101
+
+.menu
+  +flexbox
+  list-style: none
+  margin-bottom: 0
+  &__item
+    margin: 0 $menu-link-m
+    font-family: $fontRobotoReg
+    font-size: $menu-link-fs
+    line-height: $menu-link-lh
+    text-transform: capitalize
+  &__link
+    color: $menu-link-color
+    &:hover
+      text-decoration: none
+
+.contacts
+  +flexbox
+  +flex-direction(column)
+  +align-items(flex-end)
+  &__text
+    font-size: $contact-text-fs
+    font-family: $fontBebasNeueReg
+    color: $contact-text-color
+    line-height: $contact-text-lh
+    letter-spacing: -1
+  &__phone
+    font-size: $contact-text-fs
+    font-family: $fontBebasNeueReg
+    color: $contact-text-color
+    line-height: $contact-text-lh
+    &:hover
+      text-decoration: none
+      color: $contact-text-color
+  &-wa
+    +flexbox()
+    +align-items(center)
+    +justify-content(space-between)
+    width: $contact-wa-width
+    font-size: $contact-wa-fs
+    font-family: $fontRobotoReg
+    color: $contact-wa-color
+    &:hover
+      text-decoration: none
+      color: $contact-wa-color
+
+.whatsapp
+  display: inline-block
+  width: $wa-width
+  min-width: $wa-width
+  height: $wa-height
+  background:
+    image: url(../images/ic_whatsapp.svg)
+    size: contain
+    repeat: no-repeat
