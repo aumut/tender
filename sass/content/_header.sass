@@ -4,33 +4,36 @@
   +align-items(center)
   margin-top: $header-mt
 
+
 .logo
   display: inline-block
   font-size: $logo-fs
   text-transform: uppercase
   &__link
     font-family: $fontBebasNeueBold
+    letter-spacing: $logo-link-ls
     &:hover
       text-decoration: none
   &__text--blue
-    color: #009bf9
+    color: $logo-blue
   &__text--grey
-    color: #010101
+    color: $logo-grey
+
 
 .menu
   +flexbox
   list-style: none
   margin-bottom: 0
   &__item
-    margin: 0 $menu-link-m
     font-family: $fontRobotoReg
     font-size: $menu-link-fs
     line-height: $menu-link-lh
-    text-transform: capitalize
+    margin-right: $menu-link-mr
   &__link
     color: $menu-link-color
     &:hover
       text-decoration: none
+      color: $logo-blue
 
 .contacts
   +flexbox
@@ -41,12 +44,13 @@
     font-family: $fontBebasNeueReg
     color: $contact-text-color
     line-height: $contact-text-lh
-    letter-spacing: -1
+    letter-spacing: 0.5px
   &__phone
     font-size: $contact-text-fs
     font-family: $fontBebasNeueReg
     color: $contact-text-color
     line-height: $contact-text-lh
+    letter-spacing: 0.4px
     &:hover
       text-decoration: none
       color: $contact-text-color
@@ -58,6 +62,8 @@
     font-size: $contact-wa-fs
     font-family: $fontRobotoReg
     color: $contact-wa-color
+    text-align: right
+    line-height: 1.5
     &:hover
       text-decoration: none
       color: $contact-wa-color
@@ -71,3 +77,25 @@
     image: url(../images/ic_whatsapp.svg)
     size: contain
     repeat: no-repeat
+
+
+.header
+  .logo
+    +align-self(flex-start)
+    margin-top: 7px
+    flex-grow: 1
+  .menu
+    +align-self(flex-start)
+    margin-top: 14px
+    margin-left: 60px
+    padding: 0px
+    flex-grow: 2
+    +tablet
+      margin-left: 20px
+    &__item
+      +tablet
+        margin-right: 10px
+  .contacts-wa
+    margin-top: 3px
+  .contacts__phone
+    margin-top: 3px
