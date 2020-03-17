@@ -1,5 +1,5 @@
 .banner
-  max-width: 600px
+  max-width: 615px
   flex-grow: 1
   +flexbox()
   +flex-direction(column)
@@ -51,3 +51,47 @@
   background-size: cover
   background-position: 0 0
   background-repeat: no-repeat
+
+
+.tender-score
+  +flexbox
+  margin-bottom: 53px
+  &__in
+    width: $tender-score-width
+    height: $tender-score-height
+    color: $tender-score-col
+    +border_radius($tender-score-rad)
+    font-size: $tender-score-fs
+    font-family: $fontRobotoLight
+    padding: 13px 18px
+    line-height: 16px
+    &--red
+      width: $tender-score-red-width
+      background: rgb(245,92,144)
+      background: linear-gradient(182deg, rgba(245,92,144,1) 0%, rgba(241,83,94,1) 100%)
+      margin-right: 15px
+    &--blue
+      width: $tender-score-blue-width
+      background: rgb(100,178,234)
+      background: linear-gradient(182deg, rgba(100,178,234,1) 0%, rgba(98,130,222,1) 100%)
+  &__count
+    display: block
+    font-family: $fontBebasNeueReg
+    font-size: 26px
+    margin-top: 14px
+  &__label
+    display: inline-block
+    text-align: center
+    padding: 5px 10px
+    +border_radius($tender-score-label-rad)
+    margin-top: 7px
+
+.tender-score__in--red
+  .tender-score__label
+    background-color: #b43a3e
+
+.tender-score__in--blue
+  .tender-score__label
+    background-color: #3e6bbd
+
+
