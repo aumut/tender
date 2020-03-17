@@ -15,8 +15,8 @@
     line-height: 1.6
     margin-bottom: 39px
   .time-label
-    right: 0px
-    top: 155px
+    right: -213px
+    top: 240px
 
 .wrap-header
   width: 100%
@@ -34,15 +34,13 @@
 .time-label
   +inline-flex
   +align-items(center)
-  +justify-content(flex-start)
-  +flex-direction(column)
+  +justify-content(center)
   position: absolute
-  width: 170px
-  height: 170px
+  width: 247px
+  height: 247px
   top: 0px
   right: 0px
   color: #FFFFFF
-  font-size: 14px
   font-family: $fontBebasNeueReg
   line-height: 1
   text-align: center
@@ -51,6 +49,18 @@
   background-size: cover
   background-position: 0 0
   background-repeat: no-repeat
+  .inner
+    +inline-flex
+    +align-items(center)
+    +justify-content(center)
+    +flex-direction(column)
+    margin-left: 30px
+    margin-top: -10px
+  &__digit
+    font-size: 50px
+  &__text
+    font-size: 24px
+    line-height: 28px
 
 
 .tender-score
@@ -78,13 +88,13 @@
     display: block
     font-family: $fontBebasNeueReg
     font-size: 26px
-    margin-top: 14px
+    margin-top: 11px
   &__label
     display: inline-block
     text-align: center
     padding: 5px 10px
     +border_radius($tender-score-label-rad)
-    margin-top: 7px
+    margin-top: 10px
 
 .tender-score__in--red
   .tender-score__label
