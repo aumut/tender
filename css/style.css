@@ -14,6 +14,11 @@
   font-weight: normal;
   src: local("BebasNeue-Book"), url("../fonts/BebasNeue-Book/BebasNeue-Book.woff2") format("woff2"), url("../fonts/BebasNeue-Book/BebasNeue-Book.woff") format("woff"), url("../fonts/BebasNeue-Book/BebasNeue-Book.ttf") format("ttf"), url("../fonts/BebasNeue-Book/BebasNeue-Book.eot") format("eot"); }
 @font-face {
+  font-family: "BebasNeue-Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("BebasNeue-Light"), url("../fonts/BebasNeue-Light/BebasNeue-Light.woff2") format("woff2"), url("../fonts/BebasNeue-Light/BebasNeue-Light.woff") format("woff"), url("../fonts/BebasNeue-Light/BebasNeue-Light.ttf") format("ttf"), url("../fonts/BebasNeue-Light/BebasNeue-Light.eot") format("eot"); }
+@font-face {
   font-family: "Roboto-Regular";
   font-style: normal;
   font-weight: normal;
@@ -762,5 +767,156 @@ h4 {
   background-color: #FFFFFF; }
 .steps-wrap--grey {
   background-color: #f2f0fd; }
+
+.steps {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  padding: 100px 0px; }
+
+.steps-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 472px;
+  padding: 63px 45px 56px;
+  margin: 0 25px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+  .steps-item--blue {
+    background-color: #009af9;
+    color: #FFFFFF; }
+  .steps-item--transp {
+    background-color: aquamarine;
+    color: #000000; }
+  .steps-item--row {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+  .steps-item .btn {
+    width: 254px;
+    padding: 9px 0px 9px;
+    letter-spacing: 0.3px; }
+
+.phrase {
+  display: block;
+  font-size: 32px;
+  font-family: "BebasNeue-Regular", sans-serif;
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: 0.3px;
+  position: relative;
+  margin-bottom: 12px; }
+  .phrase:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: -36px;
+    left: 0px;
+    width: 25px;
+    height: 20px;
+    background-color: transparent;
+    background-image: url("../images/ic_right_quote.svg");
+    background-repeat: no-repeat;
+    background-size: cover; }
+
+.footnote {
+  display: inline-block;
+  font-size: 16px;
+  letter-spacing: 0.3px; }
+
+.steps-item-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-left: 24px; }
+
+.steps__num {
+  font-size: 60px;
+  font-family: "BebasNeue-Light", sans-serif;
+  letter-spacing: 2px;
+  font-weight: normal;
+  text-transform: uppercase; }
+
+.steps-item__title {
+  font-size: 30px;
+  font-weight: normal;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+  line-height: 1.4; }
+
+.steps-item__text {
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+  margin-bottom: 38px; }
+
+.steps-item--s {
+  width: 550px;
+  padding: 20px 0px 20px;
+  position: relative; }
+  .steps-item--s:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: 13px;
+    right: 0px;
+    width: 193px;
+    height: 111px;
+    background-color: transparent;
+    background-image: url("../upload/magnet.png");
+    background-repeat: no-repeat;
+    background-size: cover; }
+
+.ava {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .ava__pict {
+    width: 85px;
+    height: 85px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    overflow: hidden; }
+  .ava img {
+    width: 100%;
+    height: 100%; }
 
 /*# sourceMappingURL=style.css.map */
