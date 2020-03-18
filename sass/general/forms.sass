@@ -1,0 +1,59 @@
+$form-control-pt: 18px
+$form-control-pl: 18px
+$form-control-color: #919191
+$form-control-bgcolor: #fff
+$form-control-brcolor: transparent
+$form-control-rad: 3px
+$form-control-focus-col: #80bdff
+$form-control-placeholder-col: red
+$form-control-dis-col: #e9ecef
+$form-group-mb: 10px
+
+.form-control
+  display: block
+  width: 100%
+  height: auto
+  padding: $form-control-pt $form-control-pl
+  font-size: 1rem
+  font-weight: 400
+  line-height: 1.5
+  color: $form-control-color
+  background-color: $form-control-bgcolor
+  background-clip: padding-box
+  border: 1px solid $form-control-brcolor
+  border-radius: $form-control-rad
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+
+  &::-ms-expand
+    background-color: transparent
+    border: 0
+
+  &:-moz-focusring
+    color: transparent
+    text-shadow: 0 0 0
+
+  &:focus
+    color: $form-control-color
+    background-color: #fff
+    border-color: $form-control-focus-col
+    outline: 0
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25)
+
+  &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder, &::-ms-input-placeholder, &::placeholder
+    color: $form-control-placeholder-col
+    opacity: 1
+
+  &:disabled, &[readonly]
+    background-color: $form-control-dis-col
+    opacity: 1
+
+@media (prefers-reduced-motion: reduce)
+  .form-control
+    transition: none
+
+.form-group
+  margin-bottom: $form-group-mb
+
+.form-label
+  width: 100%
+  margin-bottom: 0

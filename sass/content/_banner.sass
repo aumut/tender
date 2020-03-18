@@ -5,6 +5,33 @@
   +flex-direction(column)
   +justify-content(center)
   position: relative
+  &:after
+    content: ''
+    position: absolute
+    top: 168px
+    right: -636px
+    width: 619px
+    height: 632px
+    z-index: 5
+    background:
+      color: transparent
+      image: url("../upload/laptop.png")
+      repeat: no-repeat
+      size: cover
+  &:before
+    content: ''
+    position: absolute
+    top: 475px
+    right: -760px
+    width: 700px
+    height: 535px
+    z-index: 6
+    background:
+      color: transparent
+      image: url("../upload/money_fly.png")
+      repeat: no-repeat
+      size: cover
+
   .btn
     width: $banner-btn-width
   .title
