@@ -159,6 +159,24 @@ h4 {
   background-size: contain;
   background-repeat: no-repeat; }
 
+.instagram {
+  display: inline-block;
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  background-image: url(../images/ic_instagram.svg);
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+.facebook {
+  display: inline-block;
+  width: 19px;
+  min-width: 19px;
+  height: 19px;
+  background-image: url(../images/ic_facebook.svg);
+  background-size: contain;
+  background-repeat: no-repeat; }
+
 .clock {
   position: relative; }
   .clock:before {
@@ -192,13 +210,16 @@ h4 {
   width: 100px;
   height: 1px;
   margin: 22px 0px;
-  border: 1px solid #FFFFFF; }
+  border-top: 1px solid #FFFFFF; }
 
 .mb-3px {
   margin-bottom: 3px !important; }
 
 .mb-18px {
   margin-bottom: 18px !important; }
+
+.mb-10px {
+  margin-bottom: 10px !important; }
 
 .form-control {
   display: block;
@@ -1460,8 +1481,18 @@ h4 {
   -ms-flex-direction: column;
   flex-direction: column;
   color: #f2f0fd;
-  font-size: 16px;
-  line-height: 25px; }
+  font-size: 18px;
+  line-height: 29px; }
+  .footer .btn {
+    padding: 5px 0px 5px; }
+  .footer .line {
+    width: 83%;
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    border-color: #d1d1d1;
+    margin: 27px 0px 10px; }
 
 .footer-row {
   display: -webkit-box;
@@ -1477,10 +1508,32 @@ h4 {
   -webkit-align-self: center;
   -moz-align-self: center;
   -ms-flex-item-align: center;
-  align-self: center; }
+  align-self: center;
+  width: 100%; }
+
+.footer-info {
+  width: 375px; }
+  .footer-info.footer-text {
+    color: #f2f0fd; }
 
 .footer-text {
-  width: 355px; }
+  font-size: 16px;
+  line-height: 25px;
+  color: #bebebe; }
+
+.footer-ic {
+  position: relative;
+  padding-left: 40px; }
+  .footer-ic:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain; }
 
 .footer-phone {
   display: -webkit-box;
@@ -1498,24 +1551,78 @@ h4 {
   -ms-flex-pack: start;
   -webkit-justify-content: flex-start;
   -moz-justify-content: flex-start;
-  justify-content: flex-start; }
-  .footer-phone .footer-ic {
+  justify-content: flex-start;
+  width: 160px;
+  margin-right: 44px; }
+  .footer-phone .footer-ic:before {
+    top: 3px;
     width: 17px;
-    height: 17px; }
+    height: 17px;
+    background-image: url("../images/ic_icon_phone_y.svg"); }
 
-.footer-phone__text {
-  color: #bebebe;
-  padding-left: 20px; }
+.footer-phone__link {
+  color: #f2f0fd;
+  text-decoration: none; }
+  .footer-phone__link:hover, .footer-phone__linkactive, .footer-phone__link:visited {
+    text-decoration: none;
+    ccolor: #f2f0fd; }
 
-.footer-ic {
-  fill: #fddd7a; }
+.footer-email {
+  width: 200px;
+  margin-right: 30px; }
+  .footer-email .footer-ic:before {
+    top: 1px;
+    width: 18px;
+    height: 17px;
+    background-image: url("../images/ic_email.svg"); }
 
-.footer-email .footer-ic {
-  width: 18px;
-  height: 13px; }
+.footer-msg {
+  width: 256px; }
+  .footer-msg .footer-ic:before {
+    width: 16px;
+    height: 15px;
+    background-image: url("../images/ic_planet-earth.svg"); }
 
-.footer-msg .footer-ic {
-  width: 16px;
-  height: 15px; }
+.msg-menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0px;
+  padding: 0px; }
+  .msg-menu__item {
+    list-style: none;
+    margin: 0px 8px; }
+  .msg-menu .whatsapp {
+    width: 20px;
+    min-width: 20px;
+    height: 20px; }
+
+.develop-info {
+  font-size: 14px;
+  line-height: 33px;
+  color: #8b8b8b; }
+
+.yellow {
+  color: #e9c514; }
+
+.footer-right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  align-items: flex-start; }
 
 /*# sourceMappingURL=style.css.map */
