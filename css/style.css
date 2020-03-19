@@ -429,17 +429,18 @@ h4 {
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-top: 70px;
   position: relative; }
   .banner:after {
     content: "";
     position: absolute;
-    top: 168px;
-    right: -636px;
+    top: 25px;
+    right: -643px;
     width: 619px;
     height: 632px;
     z-index: 5;
@@ -470,7 +471,7 @@ h4 {
     margin-bottom: 39px; }
   .banner .time-label {
     right: -213px;
-    top: 240px; }
+    top: 120px; }
 
 .wrap-header {
   width: 100%;
@@ -559,7 +560,7 @@ h4 {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 53px; }
+  margin-bottom: 50px; }
   .tender-score__in {
     width: 100px;
     height: 120px;
@@ -600,10 +601,11 @@ h4 {
 .tender-score__in--blue .tender-score__label {
   background-color: #3e6bbd; }
 
-.feature-bl {
+.feature-wrap {
+  padding: 100px 0; }
+
+.feature-in {
   margin-left: 30px; }
-  .feature-bl .title {
-    margin: 100px 0px; }
 
 .wrap {
   display: -webkit-box;
