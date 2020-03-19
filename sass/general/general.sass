@@ -172,6 +172,22 @@ h4
   margin: 22px 0px
   border-top: 1px solid #FFFFFF
 
+.arrow
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    bottom: 0px
+    right: -150px
+    width: 240px
+    height: 100px
+    transform: rotate(45deg) rotateX(180deg)
+    background:
+      color: transparent
+      image: url("../upload/arrow.png")
+      repeat: no-repeat
+      size: contain
+
 .mb-3px
   margin-bottom: 3px !important
 
