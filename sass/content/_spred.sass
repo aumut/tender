@@ -1,0 +1,56 @@
+.spred-wrap
+  background: #2498f2
+  background: linear-gradient(-56deg, #f2f0fd 53%, #2498f2 0)
+  background-size: 100% 660px
+  background-repeat: no-repeat
+  padding: 140px 0px
+  position: relative
+
+.spred
+  +flexbox
+  +align-items(center)
+  +justify-content(space-between)
+  .phone-appl__form
+    width: 256px
+    margin: 0 auto
+
+.spred-item
+  +flexbox
+  +flex-direction(column)
+  width: 338px
+  padding: 38px 30px
+  color: #FFFFFF
+  font-family: $fontRobotoReg
+  font-size: 15px
+  line-height: 22px
+  background-color: transparent
+  border: 1px solid rgba(255, 255, 255, 0.36)
+  +border_radius(8px)
+  margin-bottom: 27px
+
+.spred-item__title
+  +align-self(flex-start)
+  display: inline-block
+  padding-right: 6px
+  font-size: 50px
+  font-family: $fontRobotoBlack
+  font-weight: bold
+  display: inline-block
+  position: relative
+  margin-bottom: 40px
+  &:after
+    content: ''
+    position: absolute
+    bottom: -27px
+    left: 1px
+    width: 100%
+    height: 1px
+    border-top: 1px solid #FFFFFF
+
+.spred-item__text
+  margin-bottom: 38px
+
+.spred-img
+  display: inline-block
+  width: 772px
+  height: 496px
