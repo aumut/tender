@@ -92,3 +92,67 @@ h4
 
 .highlighted
   background-color: $highlighted-color
+
+.whatsapp
+  display: inline-block
+  width: $wa-width
+  min-width: $wa-width
+  height: $wa-height
+  background:
+    image: url(../images/ic_whatsapp.svg)
+    size: contain
+    repeat: no-repeat
+
+.telegram
+  display: inline-block
+  width: $tl-width
+  min-width: $tl-width
+  height: $tl-height
+  background:
+    image: url(../images/ic_telegram.svg)
+    size: contain
+    repeat: no-repeat
+
+.clock
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    top: -4px
+    left: -37px
+    width: 27px
+    height: 27px
+    background:
+      color: transparent
+      image: url("../images/ic_clock.svg")
+      repeat: no-repeat
+      size: cover
+
+
+.ic-phone
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    bottom: -54px
+    left: calc(50% - 17px)
+    width: 34px
+    height: 34px
+    background:
+      color: transparent
+      image: url("../images/ic_phone.svg")
+      repeat: no-repeat
+      size: cover
+
+.line
+  display: block
+  width: 100px
+  height: 1px
+  margin: 22px 0px
+  border: 1px solid #FFFFFF
+
+.mb-3px
+  margin-bottom: 3px !important
+
+.mb-18px
+  margin-bottom: 18px !important
