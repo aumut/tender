@@ -403,13 +403,13 @@ h4 {
   margin-top: 14px;
   margin-left: 60px;
   padding: 0px;
-  flex-grow: 2; }
+  flex-grow: 1; }
   @media screen and (min-width: 768px) {
     .header .menu {
-      margin-left: 20px; } }
+      margin-left: 90px; } }
   @media screen and (min-width: 768px) {
     .header .menu__item {
-      margin-right: 10px; } }
+      margin-right: 35px; } }
 .header .contacts-wa {
   margin-top: 3px; }
 .header .contacts__phone {
@@ -436,7 +436,10 @@ h4 {
   justify-content: flex-start;
   margin-top: 70px;
   position: relative; }
-  .banner:after {
+
+.banner-comp {
+  position: relative; }
+  .banner-comp:after {
     content: "";
     position: absolute;
     top: 25px;
@@ -448,7 +451,10 @@ h4 {
     background-image: url("../upload/laptop.png");
     background-repeat: no-repeat;
     background-size: cover; }
-  .banner:before {
+
+.banner-money {
+  position: relative; }
+  .banner-money:before {
     content: "";
     position: absolute;
     top: 475px;
@@ -460,16 +466,16 @@ h4 {
     background-image: url("../upload/money_fly.png");
     background-repeat: no-repeat;
     background-size: cover; }
-  .banner .btn {
+  .banner-money .btn {
     width: 333px; }
-  .banner .title {
+  .banner-money .title {
     font-weight: 600;
     margin-bottom: 25px;
     line-height: 62px; }
-  .banner .title--sub {
+  .banner-money .title--sub {
     line-height: 1.6;
     margin-bottom: 39px; }
-  .banner .time-label {
+  .banner-money .time-label {
     right: -213px;
     top: 120px; }
 
