@@ -1,55 +1,65 @@
+.blue
+  color: #18a1ff
+.txtbg
+  background-color: #ffd600
+
+.mission_wrap
+  background-color: #f2f0fd
+
 .mission
   margin-top: 50px
-  background-color: #f2f0fd
-  width: 98%
-  min-height: 800px
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-content: center
-.mission_title
-  color: white
-  display: flex
-  justify-content: center
-  margin-bottom: 110px
-  div
-    background-color: #009af9
-    width: 764px
-    height: 137px
-    border-radius: 10px
-    align-content: center
-    display: flex
-    flex-direction: column
-    justify-content: center
-    padding: 40px 43px
-    position: relative
-  div::after
-    background-image: url('../upload/our_mission.png')
-    background-size: 280px 139px
-    width: 280px
-    height: 139px
-    display: block
-    position: absolute
-    border-bottom-right-radius: 10px
-    right: 0
-    bottom: 0
-    content: ''
-
-.mission_content
   width: 100%
-  display: flex
-  flex-direction: row
-  justify-content: center
+  +flexbox
+  +flex-direction(column)
+  +justify-content(center)
+  //align-content: center
+  align-items: center
+.mission__title
+  color: #ffffff
+  +flexbox
+  +justify-content(center)
+  margin-bottom: 110px
+  background-color: #009af9
+  max-width: 764px
+  +border_radius(10px)
   align-content: center
-  .mission_capture
+  +flexbox
+  +flex-direction(column)
+  +justify-content(center)
+  padding: 25px 180px 25px 43px
+  position: relative
+  h2
+    font-size: 40px
+  h3
+    font-size: 25px
+.mission__title::after
+  background-image: url('../upload/our_mission.png')
+  background-size: 280px 139px
+  width: 280px
+  height: 139px
+  display: block
+  position: absolute
+  border-bottom-right-radius: 10px
+  right: 0
+  bottom: 0
+  content: ''
+.mission__content
+  width: 100%
+  +flexbox
+  flex-direction: row
+  +justify-content(center)
+  align-self: center
+  .mission__capture
     margin: 10px
-    width: 380px
-    display: flex
-    flex-direction: column
+    width: 30%
+    +flexbox
+    +flex-direction(column)
+    justify-content: flex-start
+    align-items: center
     .description
       color: #6e6d73
+      font-family: 'Roboto-Light'
     .img img
-      //width: 99%
       width: 323px
       height: 431px
       -moz-transform: rotate(20deg)
@@ -57,131 +67,202 @@
       -webkit-transform: rotate(20deg)
       -o-transform: rotate(20deg)
       transform: rotate(20deg)
-    .slogan
-      width: 300px
-      height: 93px
-      padding: 30px 35px
-      position: relative
-      display: flex
-      flex-direction: column
-      justify-content: center
-      align-content: center
-      background-color: white
-      font-family: 'Roboto-LightItalic'
-      border-radius: 10px
-      box-shadow: 0px 48px 1px -24px rgba(213, 219, 233, 0.55), 0px 24px 1px -12px rgba(213, 219, 233, 0.55)
 
-      .tooltip_info
-        display: inline-block
-        width: 20px
-        height: 20px
-    .slogan::before
-      background-image: url('../upload/dollar.png')
-      background-size: 77px 50px
-      width: 77px
-      height: 50px
-      display: block
-      position: absolute
-      right: -27px
-      top: -10px
-      transform: rotate(20deg)
-      content: ' '
-    .slogan span::after
-      content: url('../upload/tooltip_info.png')
-      width: 19px
-      height: 19px
-      display: inline-block
-      vertical-align: bottom
-
-  .blue
-    color: #18a1ff
-  .txtbg
-    background-color: #ffd600
-  .bold
-    font-weight: bold
-
-  .mission_info
+  .mission__info
     min-height: 100%
     width: 70%
-    display: flex
+    +flexbox
     flex-wrap: wrap
+    +justify-content(center)
     align-content: space-around
-    .mission_block
-      margin: 10px
-      width: 340px
-      height: 190px
-      border-radius: 10px
-      background-color: white
-      padding: 35px
-      display: flex
-      flex-direction: column
-      justify-content: center
-      font-family: "Roboto-Light"
-      position: relative
-      .text
-        color: #707070
-      .ask_question
-        color: #5cbdfe
-        align-self: flex-end
+  .mission__block
+    margin: 47px 10px 10px 10px
+    max-width: 340px
+    min-width: 333px
+    min-height: 190px
+    +border_radius(10px)
+    background-color: #ffffff
+    +box_shadow(7px 15px 51px 0px rgba(213,219,233,0.55))
+    padding: 35px
+    +flexbox
+    +flex-direction(column)
+    +justify-content(center)
+    font-family: "Roboto-Light"
+    color: #707070
+    position: relative
+    h3
+      color: #000000
+    .ask_question
+      text-decoration: none
+      color: #5cbdfe
+      align-self: flex-end
 
-    .mission_block::before
-      background-color: #2498f2
-      //background-image: url('../images/ic_research.svg')
-      background-repeat: no-repeat
-      background-position: center
-      background-size: 49px 47px
-      width: 92px
-      height: 92px
-      border-radius: 46px
-      display: block
-      position: absolute
-      right: 20px
-      top: -46px
-      content: ' '
-    .research::before
-      background-image: url('../images/ic_research.svg')
-    .bar_chart::before
-      background-image: url('../images/ic_bar_chart.svg')
-    .profile::before
-      background-image: url('../images/ic_profile.svg')
-    .resume::before
-      background-image: url('../images/ic_resume.svg')
-    .analytics::before
-      background-image: url('../images/ic_analytics.svg')
-    .bar_chart1::before
-      background-image: url('../images/ic_bar_chart1.svg')
-//   background-color: #2498f2
-//   //background-size: 92px 92px
-//   border-radius: 46px
-//   position: absolute
-//   right: 20px
-//   top: 0px
-//   // width: 92px
-//   // height: 92px
-//   content: ''
-
-// .research::before
-//   background-color: #2498f2
-//   background-image: url('../images/ic_research.svg')
-//   background-repeat: no-repeat
-//   background-position: center
-//   background-size: 49px 47px
-//   width: 92px
-//   height: 92px
-//   border-radius: 46px
-//   display: block
-//   position: absolute
-//   right: 20px
-//   top: -46px
-//   content: ' '
-
-.mission_footer
-  height: 236px
+  .mission__block::before
+    background-color: #2498f2
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 49px 47px
+    width: 92px
+    height: 92px
+    +border_radius(50%)
+    display: block
+    position: absolute
+    right: 20px
+    top: -46px
+    content: ' '
+  .research::before
+    background-image: url('../images/ic_research.svg')
+  .bar_chart::before
+    background-image: url('../images/ic_bar_chart.svg')
+  .profile::before
+    background-image: url('../images/ic_profile.svg')
+  .resume::before
+    background-image: url('../images/ic_resume.svg')
+  .analytics::before
+    background-image: url('../images/ic_analytics.svg')
+  .bar_chart1::before
+    background-image: url('../images/ic_bar_chart1.svg')
+.mission__footer
   width: 100%
-  display: flex
-  flex-direction: column
-  justify-content: center
+  +flexbox
+  +flex-direction(column)
+  +justify-content(center)
   align-items: flex-end
   font-family: 'Roboto-Light'
-  span
-    display: inline
+  padding: 95px 160px 90px 0
+
+//----------------------------media queries-------------------------
+
+@media (min-width: 768px) and (max-width: 991px)
+  .mission__capture
+    min-width: 50%
+  .mission__info
+    max-width: 50%
+
+@media (min-width: 992px) and (max-width: 1199px)
+  .mission__capture
+    min-width: 40%
+  .mission__info
+    max-width: 35%
+
+//@media (max-width: 371px)
+@media (max-width: 767px)
+  .mission__title
+    width: 95%
+    padding: 30px 22px
+    margin-bottom: 40px
+  .mission__title::after
+    background-image: none
+    width: 0
+    height: 0
+    content: ''
+
+  .mission__content
+    +flex-direction(column)
+    +justify-content(center)
+    align-content: center
+
+  .mission__capture
+    min-width: 95%
+    padding: 0 5px
+    align-self: center
+    position: relative
+    .img
+      display: none
+    .slogan
+      margin-top: 95px
+  .mission__capture::after
+    background-image: url('../upload/time_is_money.png')
+    background-size: 136px 196px
+    width: 136px
+    height: 186px
+    left: -55px
+    bottom: 0px
+    position: absolute
+    -moz-transform: rotate(20deg)
+    -ms-transform: rotate(20deg)
+    -webkit-transform: rotate(20deg)
+    -o-transform: rotate(20deg)
+    transform: rotate(20deg)
+    content: ''
+
+  .mission__info
+    min-width: 340px
+    //margin: 61px 0 0 0
+    padding: 0
+    align-self: center
+    +flexbox
+    flex-wrap: nowrap
+
+  .mission__block
+    width: 330px
+    padding: 0
+    margin: 50px 0 0 0
+
+  .mission__footer
+    padding: 30px 0 15px 0
+    align-items: center
+    text-align: center
+    span
+      display: inline-block
+      width: 99%
+      text-align: center
+
+.slogan
+  width: 300px
+  padding: 30px 35px
+  position: relative
+  +flexbox
+  +flex-direction(column)
+  +justify-content(center)
+  align-content: center
+  background-color: #ffffff
+  font-family: 'Roboto-LightItalic'
+  +box_shadow(7px 15px 51px 0px rgba(213,219,233,0.55))
+  +border_radius(8px)
+  .tooltip_info
+    display: inline-block
+    width: 20px
+    height: 20px
+
+.slogan.dollar::before
+  right: -27px
+  top: -10px
+
+.shadow, .shadow2
+  width: 93%
+  height: 10px
+  +border_radius(0 0 10px 10px)
+  background: #e6e9f2
+  background: -moz-linear-gradient(top,  #e6e9f2 36%, #f1f3f8 100%)
+  background: -webkit-linear-gradient(top,  #e6e9f2 36%,#f1f3f8 100%)
+  background: linear-gradient(to bottom,  #e6e9f2 36%,#f1f3f8 100%)
+.shadow2
+  width: 78%
+
+.dollar::before
+  background-image: url('../upload/dollar.png')
+  background-size: 77px 50px
+  width: 77px
+  height: 50px
+  display: block
+  position: absolute
+  right: -27px
+  top: -15px
+  transform: rotate(20deg)
+  content: ''
+
+.slogan span::after
+  content: url('../upload/tooltip_info.png')
+  width: 19px
+  height: 19px
+  display: inline-block
+  vertical-align: bottom
+  margin-left: 15px
+  margin-top: 2px
+
+.slogan-wrap
+  +inline-flex
+  +flex-direction(column)
+  +justify-content(center)
+  +align-items(center)

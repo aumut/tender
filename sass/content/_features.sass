@@ -9,6 +9,7 @@
   +phone
     margin-left: 0px
   .title
+    margin-bottom: 50px
     +phone
       margin-left: 30px
       margin-bottom: 23px
@@ -25,10 +26,14 @@
   +flex-direction(row)
   +align-items(center)
   +flex-wrap(wrap)
-  padding: 0px
-  //width: calc(100% - 400px)
+  margin-bottom: 50px
+  margin-top: 25px
+  +tablet
+    padding: 0px
+    margin: 0px
   +phone
     +flex-direction(column)
+
   &__item
     +flexbox
     +align-items(center)
@@ -85,7 +90,7 @@
   padding: 50px
   background: rgb(110,180,235)
   background: linear-gradient(156deg, rgba(110,180,235,1) 0%, rgba(9,9,121,1) 33%, rgba(112,54,196,1) 72%, rgba(72,123,202,1) 100%)
-  margin-bottom: 100px
+  margin-bottom: 0px
   +box_shadow(2px -2px 1px 2px #ffd600)
   +tablet
     margin-bottom: 0px
@@ -204,5 +209,21 @@
 
 
 .right-side
+  margin-top: 6px
   +phone
     padding: 0px 15px
+
+.info
+  &.slogan-wrap
+    +tablet
+      margin-bottom: 80px
+  .slogan
+    width: 470px
+    padding: 22px 60px
+  &.arrow
+    &:after
+      bottom: 47px
+      right: -224px
+      width: 311px
+      height: 59px
+      transform: rotate(0deg) rotateX(0deg)
