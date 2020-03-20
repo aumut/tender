@@ -6,14 +6,16 @@
   +justify-content(flex-start)
   margin-top: 70px
   position: relative
+  +phone
+    margin-top: 40px
 
 .banner-comp
   position: relative
   &:after
     content: ''
     position: absolute
-    top: 25px
-    right: -643px
+    top: 32px
+    right: -658px
     width: 619px
     height: 632px
     z-index: 5
@@ -21,15 +23,21 @@
       color: transparent
       image: url("../upload/laptop.png")
       repeat: no-repeat
-      size: cover
+      size: contain
+    +tablet
+      width: 317px
+      height: 324px
+      bottom: -90px
+      top: unset
+      left: calc(50% - 317px / 2)
 
 .banner-money
   position: relative
   &:before
     content: ''
     position: absolute
-    top: 475px
-    right: -760px
+    top: 338px
+    right: -778px
     width: 700px
     height: 535px
     z-index: 6
@@ -38,19 +46,43 @@
       image: url("../upload/money_fly.png")
       repeat: no-repeat
       size: cover
+    +tablet
+      width: 278px
+      height: 212px
+      top: unset
+      bottom: -30px
+      //left: 50px
+      left: calc(50% - 278px / 2)
+      right: unset
 
   .btn
     width: $banner-btn-width
+    +phone
+      +align-self(center)
   .title
     font-weight: 600
     margin-bottom: 25px
     line-height: 62px
+    +phone
+      font-size: 40px
+      line-height: 46px
+      margin-bottom: 55px
   .title--sub
     line-height: 1.6
     margin-bottom: 39px
+    +phone
+      font-size: 16px
+      line-height: 22px
+      margin-bottom: 30px
   .time-label
     right: -213px
     top: 120px
+    +tablet
+      right: 65px
+      top: 215px
+    +phone
+      right: 130px
+      top: 230px
 
 .wrap-header
   width: 100%
@@ -61,7 +93,7 @@
   background-size: cover
   position: relative
   .container
-    min-height: 830px
+    min-height: 900px
     +flexbox()
     +flex-direction(column)
 
@@ -83,6 +115,9 @@
   background-size: cover
   background-position: 0 0
   background-repeat: no-repeat
+  +tablet
+    width: 128px
+    height: 128px
   .inner
     +inline-flex
     +align-items(center)
@@ -90,16 +125,27 @@
     +flex-direction(column)
     margin-left: 30px
     margin-top: -10px
+    +tablet
+      margin-left: 12px
+      margin-top: 1px
   &__digit
     font-size: 50px
+    +tablet
+      font-size: 30px
+      line-height: 0.8
   &__text
     font-size: 24px
     line-height: 28px
+    +tablet
+      font-size: 13px
+      line-height: 15px
 
 
 .tender-score
   +flexbox
   margin-bottom: 50px
+  +phone
+    margin-bottom: 40px
   &__in
     width: $tender-score-width
     height: $tender-score-height

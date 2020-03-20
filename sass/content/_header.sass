@@ -3,12 +3,15 @@
   +justify-content(space-between)
   +align-items(center)
   margin-top: $header-mt
-
+  +phone
+    margin-top: 33px
 
 .logo
   display: inline-block
   font-size: $logo-fs
   text-transform: uppercase
+  +phone
+    font-size: 35px
   &__link
     font-family: $fontBebasNeueBold
     letter-spacing: $logo-link-ls
@@ -24,16 +27,28 @@
   +flexbox
   list-style: none
   margin-bottom: 0
+  padding: 0px
+  +tablet
+    +flex-direction(column)
   &__item
     font-family: $fontRobotoReg
     font-size: $menu-link-fs
     line-height: $menu-link-lh
-    margin-right: $menu-link-mr
+    //margin-right: $menu-link-mr
+    margin-right: 35px
+    +tablet
+      font-size: 16px
+      font-family: $fontRobotoLight
+      line-height: 34px
   &__link
     color: $menu-link-color
-    &:hover
+    +tablet
+      color: #bebebe
+    &:hover, &:active
       text-decoration: none
       color: $logo-blue
+      +tablet
+        color: #FFFFFF
 
 .contacts
   +flexbox
@@ -68,24 +83,99 @@
       text-decoration: none
       color: $contact-wa-color
 
-
 .header
   .logo
     +align-self(flex-start)
     margin-top: 7px
     flex-grow: 1
+    +phone
+      margin-top: 0px
   .menu
-    +align-self(flex-start)
-    margin-top: 14px
-    margin-left: 60px
-    padding: 0px
-    flex-grow: 1
-    +tablet
-      margin-left: 90px
     &__item
-      +tablet
-        margin-right: 35px
+      +medium
+        margin-right: 20px
+    +tablet
+      margin-bottom: 30px
   .contacts-wa
     margin-top: 3px
   .contacts__phone
     margin-top: 3px
+  .contact-ph
+    display: none
+    width: 93%
+    margin-bottom: 20px
+    +tablet
+      +flexbox
+      +flex-direction(column)
+      +align-items(center)
+  .msg-menu
+    display: none
+    +tablet
+      +flexbox
+
+
+.wrap-header .container
+  +tablet
+    position: relative
+
+.header
+  .btn-gamburg, .btn-close
+    display: none
+    +tablet
+      display: block
+  .btn-gamburg
+    +tablet
+      position: absolute
+      top: 0px
+      left: -115px
+    +phone
+      top: 75px
+      left: 0px
+  .btn-close
+    display: none
+    +tablet
+      display: block
+      position: absolute
+      top: 15px
+      right: 15px
+
+.menu-wrap
+  +flexbox
+  +justify-content(flex-start)
+  +tablet
+    +flex-direction(column)
+    opacity: 0
+
+.header__nav
+  +align-self(flex-start)
+  margin-top: 14px
+  margin-left: 90px
+  padding: 0px
+  flex-grow: 1
+  +medium
+    margin-left: 0px
+  +tablet
+    position: absolute
+    top: 80px
+    left: 115px
+    width: 50%
+    margin: 0px
+    padding: 32px 70px 60px
+  +phone
+    width: 100%
+    top: 0px
+    left: 0px
+
+
+  &.active
+    +tablet
+      z-index: 10
+      background-color: #9231ce
+    .btn-gamburg
+      +tablet
+        left: -115px
+      +phone
+        display: none
+        left: 0px
+    .menu-wrap
+      opacity: 1

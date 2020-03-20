@@ -1,6 +1,8 @@
 .footer-wrap
   background-color: #0e3264
   padding: 40px 0px 20px
+  +phone
+    padding-top: 30px
 
 .footer
   +flexbox
@@ -15,38 +17,28 @@
     +align-self(center)
     border-color: #d1d1d1
     margin: 27px 0px 10px
+    +phone
+      display: none
 
 .footer-row
   +flexbox
   +justify-content(space-between)
   +align-self(center)
   width: 100%
+  +tablet
+    +flex-direction(column)
 
 .footer-info
   width: 375px
+  +tablet
+    +align-self(center)
+    text-align: center
   &.footer-text
     color: #f2f0fd
+    +phone
+      margin-bottom: 0px
+      padding: 0px 3px
 
-.footer-text
-  font-size: 16px
-  line-height: 25px
-  color: #bebebe
-
-
-.footer-ic
-  position: relative
-  padding-left: 40px
-  &:before
-    content: ''
-    position: absolute
-    top: 0px
-    left: 10px
-    width: 20px
-    height: 20px
-    background:
-      color: transparent
-      repeat: no-repeat
-      size: contain
 
 .footer-phone
   +flexbox
@@ -54,47 +46,38 @@
   +justify-content(flex-start)
   width: 160px
   margin-right: 44px
-  .footer-ic
-    &:before
-      top: 3px
-      width: 17px
-      height: 17px
-      background-image: url("../images/ic_icon_phone_y.svg")
-
-.footer-phone__link
-  color: #f2f0fd
-  text-decoration: none
-  &:hover, &:active, &:visited
-    text-decoration: none
-    color: #f2f0fd
+  +medium
+    margin-right: 20px
+  +phone
+    margin-right: 0px
 
 
 .footer-email
   width: 200px
   margin-right: 30px
-  .footer-ic
-    &:before
-      top: 1px
-      width: 18px
-      height: 17px
-      background-image: url("../images/ic_email.svg")
+  +phone
+    position: relative
+    margin-right: 0px
 
 .footer-msg
   width: 256px
-  .footer-ic
-    &:before
-      width: 16px
-      height: 15px
-      background-image: url("../images/ic_planet-earth.svg")
+  .btn
+    +phone
+      margin-top: 60px
 
 .msg-menu
   +flexbox
   +flex-direction(row)
-  margin: 0px
+  +justify-content(center)
+  margin: 10px 0px 10px 0px
   padding: 0px
+  +phone
+    margin-bottom: 0px
   &__item
     list-style: none
-    margin: 0px 8px
+    margin: 0px 6px
+    a
+      +flexbox
   .whatsapp
     width: 20px
     min-width: 20px
@@ -104,6 +87,13 @@
   font-size: 14px
   line-height: 33px
   color: #8b8b8b
+  +tablet
+    +flex-direction(row)
+  +phone
+    +flex-direction(column)
+    +align-items(center)
+    padding-top: 35px
+    padding-bottom: 20px
 
 .yellow
   color: #e9c514
@@ -111,3 +101,104 @@
 .footer-right
   +flexbox
   +align-items(flex-start)
+  +phone
+    +flex-direction(column)
+    +justify-content(center)
+    +align-items(center)
+
+.flex-center
+  +phone
+    +flexbox
+    +justify-content(center)
+    +align-items(center)
+    +flex-direction(column)
+
+.footer-line
+  display: none
+  position: relative
+  margin: 20px auto
+  +phone
+    display: block
+  &:after
+    content: ''
+    position: absolute
+    bottom: 0px
+    left: 0px
+    border-top: 1px solid red
+    width: 100px
+
+.line.phone-line
+  display: none
+  +phone
+    display: block
+    width: 126px
+    margin: 13px 0px 10px
+
+.footer-email__text
+  margin-bottom: 10px
+  +phone
+    margin-bottom: 0px
+
+.mob-abs
+  +phone
+    position: absolute
+    top: 160px
+
+
+/********* contact style **********/
+.contact-ph
+  .contact-ic
+    &:before
+      top: 3px
+      width: 17px
+      height: 17px
+      background-image: url("../images/ic_icon_phone_y.svg")
+
+.contact-email
+  .contact-ic
+    &:before
+      top: 1px
+      width: 18px
+      height: 17px
+      background-image: url("../images/ic_email.svg")
+      +phone
+        top: 6px
+
+.contact-msg
+  .contact-ic
+    &:before
+      width: 16px
+      height: 15px
+      background-image: url("../images/ic_planet-earth.svg")
+
+
+.contact-ph__link
+  color: #f2f0fd
+  text-decoration: none
+  font-size: 18px
+  line-height: 29px
+  &:hover, &:active
+    text-decoration: none
+    color: #f2f0fd
+
+
+.contact-ph__text
+  font-size: 16px
+  line-height: 25px
+  color: #bebebe
+
+
+.contact-ic
+  position: relative
+  padding-left: 30px
+  &:before
+    content: ''
+    position: absolute
+    top: 5px
+    left: 0px
+    width: 20px
+    height: 20px
+    background:
+      color: transparent
+      repeat: no-repeat
+      size: contain

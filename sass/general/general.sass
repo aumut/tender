@@ -14,7 +14,7 @@ body
     weight: 400
   color: $fontColorMain
   line-height: 1
-  //min-width: $bodyMinWidth
+  min-width: $bodyMinWidth
   margin: 0
   padding: 0
   height: 100vh
@@ -30,6 +30,8 @@ h1
   font-size: $fontSize_h1
 h2
   font-size: $fontSize_h2
+  +phone
+    font-size: 40px
 h3
   font-size: $fontSize_h3
 h4
@@ -89,6 +91,26 @@ h4
     width: 1px
     background-color: #ffe76d
 
+.btn-close
+  padding: 0px
+  width: 15px
+  height: 15px
+  +border_radius(0px)
+  box-shadow: none
+  background-color: transparent
+  background-image: url(../images/ic_close.svg)
+  background-repeat: no-repeat
+  background-size: cover
+  +rotate(45)
+
+.btn-gamburg
+  width: 95px
+  height: 40px
+  font-size: 16px
+  line-height: 1
+  color: #FFFFFF
+  background: #9231ce
+  +box_shadow(none)
 
 .highlighted
   background-color: $highlighted-color

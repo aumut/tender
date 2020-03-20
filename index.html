@@ -6,21 +6,42 @@
 	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
 	<title>Smart tender</title>
 </head>
 <body>
 <div class="wrap-header">
 	<div class="container">
 		<div class="header">
-			<div class="logo"><a href="#" class="logo__link"><span class="logo__text--blue">Smart</span><span class="logo__text--grey">Tender</span></a></div>
-			<ul class="menu header__menu">
-				<li class="menu__item"><a href="#" class="menu__link">Главная</a></li>
-				<li class="menu__item"><a href="#" class="menu__link">О платформе</a></li>
-				<li class="menu__item"><a href="#" class="menu__link">Для кого</a></li>
-				<li class="menu__item"><a href="#" class="menu__link">Плюсы</a></li>
-				<li class="menu__item"><a href="#" class="menu__link">Беслатная подписка</a></li>
-				<li class="menu__item"><a href="#" class="menu__link">Конакты</a></li>
-			</ul>
+			<div class="logo"><a href="#banner" class="logo__link"><span class="logo__text--blue">Smart</span><span class="logo__text--grey">Tender</span></a></div>
+			<div class="header__nav">
+				<button type="button" class="btn btn-gamburg" id="btn_gamburg">Меню</button>
+				<div class="menu-wrap">
+					<button type="button" class="btn btn-close" id="btn_close"></button>
+					<ul class="menu header__menu">
+						<li class="menu__item"><a href="#banner" class="menu__link">Главная</a></li>
+						<li class="menu__item"><a href="#spred" class="menu__link">О платформе</a></li>
+						<li class="menu__item"><a href="#feature" class="menu__link">Для кого</a></li>
+						<li class="menu__item"><a href="#steps" class="menu__link">Плюсы</a></li>
+						<li class="menu__item"><a href="#appl" class="menu__link">Беслатная подписка</a></li>
+						<li class="menu__item"><a href="#contacts" class="menu__link">Конакты</a></li>
+					</ul>
+					<div class="flex-center contact-ph">
+						<span class="contact-ic contact-ph__text">Телефон</span>
+						<a href="tel:0555896545" class="contact-ph__link">+996 555 89 65 45</a>
+						<a href="tel:0555896545" class="contact-ph__link">+996 777 55 77 66</a>
+						<a href="tel:0555896545" class="contact-ph__link">+996 500 44 22 33</a>
+					</div>
+					<ul class="msg-menu">
+						<li class="msg-menu__item"><a href="https://api.whatsapp.com/send?phone=996555896545"><span class="whatsapp"></span></a></li>
+						<li class="msg-menu__item"><a href="#" class="telegram"></a></li>
+						<li class="msg-menu__item"><a href="#" class="instagram"></a></li>
+						<li class="msg-menu__item"><a href="#" class="facebook"></a></li>
+					</ul>
+				</div>
+			</div>
+
 			<div class="contacts">
 				<span class="contacts__text">Есть вопросы?</span>
 				<a href="https://api.whatsapp.com/send?phone=996555896545" class="contacts-wa">
@@ -29,7 +50,7 @@
 				<a href="tel:0555896545" class="contacts__phone">+996 555 89 65 45</a>
 			</div>
 		</div>
-		<div class="banner banner-comp banner-money">
+		<div class="banner banner-comp banner-money" id="banner">
 			<div class="tender-score">
 				<div class="tender-score__in tender-score__in--red">
 					Найдено тендеров:
@@ -54,7 +75,7 @@
 		</div>
 	</div>
 </div>
-<div class="feature-wrap">
+<div class="feature-wrap" id="feature">
 	<div class="container">
 		<div class="feature-in">
 			<h2 class="title">Если вы-</h2>
@@ -106,7 +127,7 @@
 		<div class="smak"></div>
 </div>-->
 
-<div class="steps-wrap steps-wrap--white">
+<div class="steps-wrap steps-wrap--white" id="steps">
 	<div class="container">
 		<div class="steps">
 			<div class="steps-item steps-item--blue steps-item--f">
@@ -114,7 +135,7 @@
 				<span class="footnote">© Роберт Кийосаки.</span>
 				<div class="ava"><div class="ava__pict"><img src="upload/kijosaki_robert.png" alt=""></div></div>
 			</div>
-			<div class="steps-item steps-item--transp steps-item--row steps-item--s">
+			<div class="steps-item steps-item--transp steps-item--row steps-item--s magnet">
 				<span class="steps__num">01</span>
 				<div class="steps-item-wrap">
 					<h4 class="title steps-item__title">а что если</h4>
@@ -128,7 +149,7 @@
 <div class="steps-wrap steps-wrap--grey">
 	<div class="container">
 		<div class="steps">
-			<div class="steps-item steps-item--transp steps-item--row steps-item--t arrow">
+			<div class="steps-item steps-item--transp steps-item--row steps-item--t arrow elephant">
 				<span class="steps__num">02</span>
 				<div class="steps-item-wrap">
 					<h4 class="title steps-item__title">или</h4>
@@ -141,7 +162,7 @@
 		</div>
 	</div>
 </div>
-<div class="phone-appl-wrap">
+<div class="phone-appl-wrap" id="appl">
 	<div class="container">
 		<div class="phone-appl-in">
 			<div class="phone-appl send-phone-appl">
@@ -181,7 +202,7 @@
 		</div>
 	</div>
 </div>
-<div class="spred-wrap">
+<div class="spred-wrap" id="spred">
 	<div class="container">
 		<div class="spred">
 			<div class="spred-left">
@@ -207,31 +228,35 @@
 	</div>
 </div>
 
-<div class="footer-wrap">
+<div class="footer-wrap" id="contacts">
 	<div class="container">
 		<div class="footer">
 			<div class="footer-row">
 				<p class="footer-text footer-info">Tender Smart ежедневно мониторит все основные коммерческие и государственные торговые площадки и скачивает в свою базу все новые тендеры.</p>
+				<div class="line phone-line"></div>
 				<div class="footer-right">
-					<div class="footer-phone">
-						<span class="footer-text footer-ic">Телефон</span>
-						<a href="tel:0555896545" class="footer-phone__link">+996 555 89 65 45</a>
-						<a href="tel:0555896545" class="footer-phone__link">+996 555 89 65 45</a>
-						<a href="tel:0555896545" class="footer-phone__link">+996 555 89 65 45</a>
+					<div class="footer-phone flex-center contact-ph">
+						<span class="footer-text contact-ic contact-ph__text">Телефон</span>
+						<a href="tel:0555896545" class="contact-ph__link">+996 555 89 65 45</a>
+						<a href="tel:0777557766" class="contact-ph__link">+996 777 55 77 66</a>
+						<a href="tel:0500442233" class="contact-ph__link">+996 500 44 22 33</a>
 					</div>
-					<div class="footer-email">
-						<span class="footer-text footer-ic">Email</span>
-						<div class="mb-10px">tendersmar@gmail.com</div>
-						<button type="button" class="btn">Обратный звонок</button>
+					<div class="line phone-line"></div>
+					<div class="footer-email flex-center contact-email">
+						<span class="footer-text contact-ic">Email</span>
+						<div class="footer-email__text">tendersmar@gmail.com</div>
+						<button type="button" class="btn mob-abs">Обратный звонок</button>
 					</div>
-					<div class="footer-msg">
-						<span class="footer-text footer-ic">Мы в социальных сетях:</span>
-						<ul class="msg-menu mb-10px">
+					<div class="line phone-line"></div>
+					<div class="footer-msg flex-center contact-msg">
+						<span class="footer-text contact-ic">Мы в социальных сетях:</span>
+						<ul class="msg-menu">
 							<li class="msg-menu__item"><a href="https://api.whatsapp.com/send?phone=996555896545"><span class="whatsapp"></span></a></li>
 							<li class="msg-menu__item"><a href="#" class="telegram"></a></li>
 							<li class="msg-menu__item"><a href="#" class="instagram"></a></li>
 							<li class="msg-menu__item"><a href="#" class="facebook"></a></li>
 						</ul>
+						<div class="line phone-line"></div>
 						<button type="button" class="btn">14 дней бесплатно</button>
 					</div>
 				</div>

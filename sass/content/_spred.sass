@@ -3,16 +3,24 @@
   background: linear-gradient(-56deg, #f2f0fd 53%, #2498f2 0)
   background-size: 100% 660px
   background-repeat: no-repeat
-  padding: 140px 0px
+  padding: 140px 0px 0px
   position: relative
+  +tablet
+    background: #2498f2
+  +phone
+    padding: 40px 0px
 
 .spred
   +flexbox
   +align-items(center)
   +justify-content(space-between)
+  +tablet
+    +flex-direction(column)
   .phone-appl__form
     width: 256px
     margin: 0 auto
+    +phone
+      padding: 0px
 
 .spred-item
   +flexbox
@@ -27,6 +35,9 @@
   border: 1px solid rgba(255, 255, 255, 0.36)
   +border_radius(8px)
   margin-bottom: 27px
+  +phone
+    margin-top: 22px
+    margin-bottom: 36px
 
 .spred-item__title
   +align-self(flex-start)
@@ -54,3 +65,12 @@
   display: inline-block
   width: 772px
   height: 496px
+  +medium
+    width: 100%
+    height: auto
+  +tablet
+    width: 100%
+
+.spred-right
+  +tablet
+    order: -1

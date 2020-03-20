@@ -1,19 +1,34 @@
 .feature-wrap
   padding: 100px 0
+  +phone
+    padding: 105px 0
 .feature-in
   margin-left: 30px
+  +medium
+    margin-left: 0px
+  +phone
+    margin-left: 0px
+  .title
+    +phone
+      margin-left: 30px
+      margin-bottom: 23px
 
 .wrap
   +flexbox
   +flex-direction(row)
   +align-items(center)
+  +tablet
+    +flex-direction(column)
 
 .features
   +flexbox
   +flex-direction(row)
   +align-items(center)
   +flex-wrap(wrap)
+  padding: 0px
   //width: calc(100% - 400px)
+  +phone
+    +flex-direction(column)
   &__item
     +flexbox
     +align-items(center)
@@ -22,8 +37,18 @@
     padding: 27px 10px
     font-size: 18px
     line-height: 25px
+    //+medium
+      width: 85%
+    +phone
+      width: 100%
+      font-size: 16px
+      padding: 7px 20px 7px 10px
     &:nth-child(even)
       width: 45%
+      //+medium
+        width: 85%
+      +phone
+        width: 100%
   &__ic
     display: inline-block
     width: 100px
@@ -62,10 +87,21 @@
   background: linear-gradient(156deg, rgba(110,180,235,1) 0%, rgba(9,9,121,1) 33%, rgba(112,54,196,1) 72%, rgba(72,123,202,1) 100%)
   margin-bottom: 100px
   +box_shadow(2px -2px 1px 2px #ffd600)
+  +tablet
+    margin-bottom: 0px
+  +phone
+    width: 100%
+    padding: 50px 35px
 
   .form-control
     +box_shadow(0px 12px 16px 0px rgba(0,0,0,0.21))
-    padding: 21px 18px 15px 44px
+    padding: 13px 18px 14px 44px
+    +phone
+      font-size: 14px
+  .btn
+    font-size: 15px
+    +phone
+      padding: 8px 0px
 
   &:after, &:before
     background: #FFFFFF
@@ -92,6 +128,9 @@
     margin-bottom: 35px
     text-align: center
     position: relative
+    +phone
+      font-size: 16px
+      margin-bottom: 23px
     &:after
       content: ''
       display: inline-block
@@ -105,6 +144,9 @@
         image: url("../images/ic_chat.svg")
         repeat: no-repeat
         size: cover
+      +phone
+        width: 32px
+        height: 28px
 
 .appl-form__phone
     display: inline-block
@@ -120,11 +162,10 @@
 .appl-form__text
     font-size: 8px
 
-
 .appl-form__form
-    display: inline-block
-    width: 100%
-    padding: 0px 25px
+  display: inline-block
+  width: 100%
+  padding: 0px 25px
   .form-label
     position: relative
     &:before
@@ -161,3 +202,7 @@
   +justify-content(center)
   +align-items(center)
 
+
+.right-side
+  +phone
+    padding: 0px 15px
