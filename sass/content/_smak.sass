@@ -8,6 +8,7 @@
   color: #FFFFFF
   +border_radius(8px)
   position: relative
+  margin-bottom: 90px
   &:before
     content: ''
     position: absolute
@@ -15,6 +16,7 @@
     right: -1px
     width: 280px
     height: 139px
+    border-bottom-right-radius: 8px
     background:
       color: transparent
       image: url("../upload/our_mission.png")
@@ -29,7 +31,7 @@
       content: ''
       display: inline-block
       position: absolute
-      top: 50%
+      top: calc(50% - 1px)
       right: 33%
       width: 257px
       height: 1px
