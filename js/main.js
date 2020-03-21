@@ -9,7 +9,7 @@ $(function() {
 
 //slider
     let wwidth= $(window).width();
-    if (wwidth<768 )
+    if (wwidth<1199 )
     {
         $('.mission__info').slick({
             dots: true,

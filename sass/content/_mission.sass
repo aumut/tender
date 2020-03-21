@@ -20,35 +20,54 @@
   //align-content: center
   align-items: center
   position: relative
-.mission__title
-  color: #ffffff
+.mission-bl
   +flexbox
   +justify-content(center)
-  margin-bottom: 110px
-  background-color: #009af9
-  max-width: 764px
-  +border_radius(10px)
-  align-content: center
-  +flexbox
   +flex-direction(column)
   +justify-content(center)
-  padding: 25px 180px 25px 43px
-  position: relative
-  h2
-    font-size: 40px
-  h3
-    font-size: 25px
-.mission__title::after
-  background-image: url('../upload/our_mission.png')
-  background-size: 280px 131px
-  width: 280px
-  height: 131px
   display: block
-  position: absolute
-  border-bottom-right-radius: 10px
-  right: 0
-  bottom: 0
-  content: ''
+  margin: 0 auto
+  max-width: 764px
+  padding: 34px 40px 28px
+  background-color: #009af9
+  color: #FFFFFF
+  +border_radius(10px)
+  position: relative
+  margin-bottom: 107px
+  &:before
+    content: ''
+    position: absolute
+    top: 0px
+    right: -1px
+    width: 280px
+    height: 139px
+    border-bottom-right-radius: 8px
+    background:
+      color: transparent
+      image: url("../upload/our_mission.png")
+      repeat: no-repeat
+      size: contain
+  .title
+    font-size: 40px
+    margin-bottom: 0
+    letter-spacing: 0.8px
+    position: relative
+    padding-right: 10px
+    &:after
+      content: ''
+      display: inline-block
+      position: absolute
+      top: calc(50% - 1px)
+      width: 180px
+      height: 1px
+      background-color: #FFFFFF
+  .subtitle
+    font-family: $fontBebasNeueReg
+    font-weight: normal
+    font-size: 27px
+    margin-bottom: 0
+    line-height: 1.3
+    letter-spacing: -0.3px
 .mission__content
   width: 100%
   +flexbox
@@ -61,7 +80,7 @@
     +flexbox
     +flex-direction(column)
     +justify-content(space-between)
-    +align-self(center)
+    +align-self(start)
     .title
       letter-spacing: 0.8px
       margin-bottom: 14px
@@ -163,86 +182,129 @@
 
 //----------------------------media queries-------------------------
 
-@media (min-width: 768px) and (max-width: 991px)
+@media (min-width: 768px) and (max-width: 1199px)
+  .mission-bl
+    width: 95%
+    padding: 30px 22px
+    margin-bottom: 40px
+    align-self: center
+
   .mission__content
     +flex-direction(column)
-  .mission__capture
-    min-width: 100%
-  .mission__info
-    width: 100%
-    max-width: 100%
-
-@media (min-width: 992px) and (max-width: 1199px)
-  .mission__capture
-    min-width: 40%
-  .mission__info
-    max-width: 35%
+    +justify-content(flex-center)
+    .mission__capture
+      min-width: 95%
+      align-items: center
+      align-content: center
+      .slogan-wrap
+        align-self: center
+        margin-bottom: 50px
+    .mission__info
+      width: 400px
+      //max-width: 350px
+      align-items: center
+      align-content: center
+      padding: 0
+      align-self: center
+      +flexbox
+      flex-wrap: nowrap
+      .slick-initialized, .slick-slider, .slick-dotted,
+      .slick-list, .slick-track, .slick-slide
+        overflow: hidden
+      .slick-dots li button:before
+        font-size: 6px
+        color: #b4b4b4
+      .slick-dots li.slick-active button:before
+        font-size: 8px
+        opacity: .75
+        color: #2698f2
+      .slick-slide
+        .mission__block
+          -webkit-box-shadow: none
+          -moz-box-shadow: none
+          box-shadow: none
+  .mission__block
+    width: 330px
+    padding: 0
+    margin: 50px 0 0 0
+  .mission__footer
+    padding: 30px 0 15px 0
+    align-items: center
+    text-align: center
+    align-self: center
+    span
+      display: inline-block
+      width: 99%
+      text-align: center
 
 //@media (max-width: 371px)
 @media (max-width: 767px)
   .mission_wrap
     margin-top: 25px
-  .mission__title
+  .mission-bl
     width: 95%
     padding: 30px 22px
     margin-bottom: 40px
-  .mission__title::after
-    background-image: none
-    width: 0
-    height: 0
-    content: ''
+    &:before
+      background-image: none
+      width: 0
+      height: 0
+      content: ''
+    .title::after
+      width: 20%
 
   .mission__content
     +flex-direction(column)
     +justify-content(center)
     align-content: center
+    .mission__capture
+      min-width: 95%
+      padding: 0 5px
+      align-self: center
+      position: relative
+      .img
+        display: none
+      .slogan
+        margin-top: 95px
+    .mission__capture::after
+      background-image: url('../upload/time_is_money.png')
+      background-size: 136px 196px
+      width: 136px
+      height: 186px
+      left: calc(50% - 223px)
+      bottom: 37px
+      position: absolute
+      -moz-transform: rotate(20deg)
+      -ms-transform: rotate(20deg)
+      -webkit-transform: rotate(20deg)
+      -o-transform: rotate(20deg)
+      transform: rotate(20deg)
+      content: ''
 
-  .mission__capture
-    min-width: 95%
-    padding: 0 5px
-    align-self: center
-    position: relative
-    .img
-      display: none
-    .slogan
-      margin-top: 95px
-  .mission__capture::after
-    background-image: url('../upload/time_is_money.png')
-    background-size: 136px 196px
-    width: 136px
-    height: 186px
-    left: -55px
-    bottom: 0px
-    position: absolute
-    -moz-transform: rotate(20deg)
-    -ms-transform: rotate(20deg)
-    -webkit-transform: rotate(20deg)
-    -o-transform: rotate(20deg)
-    transform: rotate(20deg)
-    content: ''
-
-  .mission__info
-    min-width: 340px
-    //margin: 61px 0 0 0
-    padding: 0
-    align-self: center
-    +flexbox
-    flex-wrap: nowrap
-    .slick-initialized, .slick-slider, .slick-dotted,
-    .slick-list, .slick-track, .slick-slide
-      overflow: hidden
-    .slick-dots li button:before
-      font-size: 6px
-      color: #b4b4b4
-    .slick-dots li.slick-active button:before
-      font-size: 8px
-      opacity: .75
-      color: #2698f2
-    .slick-slide
-      .mission__block
-        -webkit-box-shadow: none
-        -moz-box-shadow: none
-        box-shadow: none
+    .mission__info
+      width: 340px
+      //margin: 61px 0 0 0
+      padding: 0
+      align-self: center
+      align-items: center
+      align-content: center
+      +flexbox
+      flex-wrap: nowrap
+      .slick-initialized, .slick-slider, .slick-dotted,
+      .slick-list, .slick-track, .slick-slide
+        overflow: hidden
+      .slick-dots li button:before
+        font-size: 6px
+        color: #b4b4b4
+      .slick-dots li.slick-active button:before
+        font-size: 8px
+        opacity: .75
+        color: #2698f2
+      .slick-slide
+        .mission__block
+          -webkit-box-shadow: none
+          -moz-box-shadow: none
+          box-shadow: none
 
   .mission__block
     width: 330px
