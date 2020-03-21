@@ -5,6 +5,11 @@
 
 .mission_wrap
   background-color: #f2f0fd
+  position: relative
+  padding-top: 15px
+  background-image: url('../upload/bg_mission.png')
+  background-repeat: no-repeat
+  background-size: contain
 
 .mission
   margin-top: 50px
@@ -14,6 +19,7 @@
   +justify-content(center)
   //align-content: center
   align-items: center
+  position: relative
 .mission__title
   color: #ffffff
   +flexbox
@@ -34,9 +40,9 @@
     font-size: 25px
 .mission__title::after
   background-image: url('../upload/our_mission.png')
-  background-size: 280px 139px
+  background-size: 280px 131px
   width: 280px
-  height: 139px
+  height: 131px
   display: block
   position: absolute
   border-bottom-right-radius: 10px
@@ -134,10 +140,13 @@
 //----------------------------media queries-------------------------
 
 @media (min-width: 768px) and (max-width: 991px)
+  .mission__content
+    +flex-direction(column)
   .mission__capture
-    min-width: 50%
+    min-width: 100%
   .mission__info
-    max-width: 50%
+    width: 100%
+    max-width: 100%
 
 @media (min-width: 992px) and (max-width: 1199px)
   .mission__capture
@@ -147,6 +156,8 @@
 
 //@media (max-width: 371px)
 @media (max-width: 767px)
+  .mission_wrap
+    margin-top: 25px
   .mission__title
     width: 95%
     padding: 30px 22px
@@ -193,6 +204,21 @@
     align-self: center
     +flexbox
     flex-wrap: nowrap
+    .slick-initialized, .slick-slider, .slick-dotted,
+    .slick-list, .slick-track, .slick-slide
+      overflow: hidden
+    .slick-dots li button:before
+      font-size: 6px
+      color: #b4b4b4
+    .slick-dots li.slick-active button:before
+      font-size: 8px
+      opacity: .75
+      color: #2698f2
+    .slick-slide
+      .mission__block
+        -webkit-box-shadow: none
+        -moz-box-shadow: none
+        box-shadow: none
 
   .mission__block
     width: 330px
@@ -218,8 +244,11 @@
   align-content: center
   background-color: #ffffff
   font-family: 'Roboto-LightItalic'
+  font-size: 1rem
   +box_shadow(7px 15px 51px 0px rgba(213,219,233,0.55))
   +border_radius(8px)
+  +phone
+    font-size: 16px
   .tooltip_info
     display: inline-block
     width: 20px

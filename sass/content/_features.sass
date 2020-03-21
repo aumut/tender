@@ -1,7 +1,7 @@
 .feature-wrap
   padding: 100px 0
   +phone
-    padding: 105px 0
+    padding: 105px 0 0
 .feature-in
   margin-left: 30px
   +medium
@@ -28,11 +28,12 @@
   +flex-wrap(wrap)
   margin-bottom: 50px
   margin-top: 25px
+  padding: 0px
   +tablet
-    padding: 0px
-    margin: 0px
+    margin: 0px 0px 16px
   +phone
     +flex-direction(column)
+
 
   &__item
     +flexbox
@@ -44,14 +45,18 @@
     line-height: 25px
     //+medium
       width: 85%
+    +medium
+      width: 48%
+      padding-left: 0px
+      padding-right: 0px
     +phone
       width: 100%
       font-size: 16px
-      padding: 7px 20px 7px 10px
+      padding: 7px 10px 7px
     &:nth-child(even)
       width: 45%
-      //+medium
-        width: 85%
+      +medium
+        width: 48%
       +phone
         width: 100%
   &__ic
@@ -213,13 +218,22 @@
   +phone
     padding: 0px 15px
 
+.left-side
+  +flexbox
+  +flex-direction(column)
+
 .info
   &.slogan-wrap
+    +align-self(flex-start)
     +tablet
-      margin-bottom: 80px
+      margin-bottom: 90px
+      padding: 0px 10px
+      +align-self(center)
   .slogan
     width: 470px
-    padding: 22px 60px
+    padding: 20px 60px
+    +phone
+      width: 100%
   &.arrow
     &:after
       bottom: 47px
@@ -227,3 +241,7 @@
       width: 311px
       height: 59px
       transform: rotate(0deg) rotateX(0deg)
+      +tablet
+        transform: rotate(24deg) rotateX(180deg)
+        bottom: -59px
+        right: 25px

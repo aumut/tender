@@ -1,6 +1,6 @@
 .footer-wrap
   background-color: #0e3264
-  padding: 40px 0px 20px
+  padding: 45px 0px 20px
   +phone
     padding-top: 30px
 
@@ -8,7 +8,7 @@
   +flexbox
   +flex-direction(column)
   color: #f2f0fd
-  font-size: 18px
+  font-size: 16px
   line-height: 29px
   .btn
     padding: 5px 0px 5px
@@ -39,13 +39,17 @@
       margin-bottom: 0px
       padding: 0px 3px
 
+.footer-text
+  font-size: 16px
+  line-height: 25px
+  color: #bebebe
 
 .footer-phone
   +flexbox
   +flex-direction(column)
   +justify-content(flex-start)
   width: 160px
-  margin-right: 44px
+  margin-right: 35px
   +medium
     margin-right: 20px
   +phone
@@ -53,13 +57,19 @@
 
 
 .footer-email
+  +flexbox
+  +flex-direction(column)
+  +justify-content(flex-start)
   width: 200px
-  margin-right: 30px
+  margin-right: 25px
   +phone
     position: relative
     margin-right: 0px
 
 .footer-msg
+  +flexbox
+  +flex-direction(column)
+  +justify-content(flex-start)
   width: 256px
   .btn
     +phone
@@ -69,10 +79,13 @@
   +flexbox
   +flex-direction(row)
   +justify-content(center)
-  margin: 10px 0px 10px 0px
+  +align-self(flex-start)
+  margin: 10px 0px 10px 13px
   padding: 0px
   +phone
+    +align-self(center)
     margin-bottom: 0px
+    margin-left: 0px
   &__item
     list-style: none
     margin: 0px 6px
@@ -135,7 +148,14 @@
     margin: 13px 0px 10px
 
 .footer-email__text
+  display: inline-block
   margin-bottom: 10px
+  text-decoration: none
+  color: #f2f0fd
+  font-size: 18px
+  &:hover, &:active
+    text-decoration: none
+    color: #f2f0fd
   +phone
     margin-bottom: 0px
 
@@ -165,6 +185,7 @@
         top: 6px
 
 .contact-msg
+  +align-items(center)
   .contact-ic
     &:before
       width: 16px
