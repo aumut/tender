@@ -7,6 +7,26 @@ $(function() {
         $('.header__nav').toggleClass('active');
     });
 
+//spred point
+
+    //установить номер в заголовке
+    let active_selected = $('.spred-point-item.active').data('selected');
+    $('.spred-item__title').text("0" + active_selected);
+
+    //менять текст в блоке в зависимости от кликнутого элемента
+    $('.spred-point-item').click(function () {
+        let selected = $(this).data('selected');
+
+        $('.spred-point-item').removeClass('active');
+        $(this).addClass('active');
+
+        $('.spred-item__text').removeClass('active');
+        $(".spred-item__text[data-selected='"+ selected +"']").addClass('active');
+
+        $('.spred-item__title').text("0" + selected);
+    });
+
+
 //slider
     let wwidth= $(window).width();
     if (wwidth<1199 )
@@ -66,5 +86,6 @@ $(function() {
 
 // phone field
     $(".send_user_phone").mask("+999 (999)99-99-99");
+
 
 });

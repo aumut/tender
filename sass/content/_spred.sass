@@ -26,6 +26,7 @@
   +flexbox
   +flex-direction(column)
   width: 338px
+  height: 311px
   padding: 38px 30px
   color: #FFFFFF
   font-family: $fontRobotoReg
@@ -59,8 +60,12 @@
     border-top: 1px solid #FFFFFF
 
 .spred-item__text
-  margin-bottom: 38px
+  display: none
+  //margin-bottom: 38px
   font-family: $fontRobotoLight
+  overflow: hidden
+  &.active
+    display: block
 
 .spred-img
   display: inline-block
@@ -73,5 +78,126 @@
     width: 100%
 
 .spred-right
+  position: relative
   +tablet
     order: -1
+
+.spred-point
+  position: absolute
+  top: 0px
+  left: 0px
+  cursor: pointer
+  &-item
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 58px
+    height: 58px
+    +border_radius(50%)
+    background-color: rgba(232, 91, 67, 0.23)
+    +inline-flex
+    +justify-content(center)
+    +align-items(center)
+    +phone
+      width: 29px
+      height: 29px
+    &__out
+      background-color: rgba(232, 91, 67, 0.33)
+      width: 46px
+      height: 46px
+      +border_radius(50%)
+      +inline-flex
+      +justify-content(center)
+      +align-items(center)
+      +phone
+        width: 23px
+        height: 29px
+    &__in
+      width: 34px
+      height: 35px
+      +border_radius(50%)
+      background:
+        color: rgba(232, 91, 67, 1)
+        //color: green
+        image: url("../images/ic_close.svg")
+        repeat: no-repeat
+        size: 13px
+        position: center
+      +phone
+        width: 17px
+        height: 17px
+        background-size: 6px
+
+.spred-point-item
+  opacity: .5
+  animation: circle-anim 2.4s infinite ease-in-out !important
+  transition: all 0.5s
+  &.active
+    .spred-point-item__in
+      background-color: #FFFFFF
+      background-image: url("../images/ic_add.svg")
+
+.spred-point-item
+  &:first-child
+    top: $spred-item-t1
+    left: $spred-item-l1
+    +phone
+      top: calc(#{$spred-item-t1} / 2.1)
+      left: calc(#{$spred-item-l1} / 2.1)
+  &:nth-child(2)
+    top: $spred-item-t2
+    left: $spred-item-l2
+    +phone
+      top: calc(#{$spred-item-t2} / 2.1)
+      left: calc(#{$spred-item-l2} / 2.1)
+  &:nth-child(3)
+    top: $spred-item-t3
+    left: $spred-item-l3
+    +phone
+      top: calc(#{$spred-item-t3} / 2.1)
+      left: calc(#{$spred-item-l3} / 2.1)
+  &:nth-child(4)
+    top: $spred-item-t4
+    left: $spred-item-l4
+    +phone
+      top: calc(#{$spred-item-t4} / 2.1)
+      left: calc(#{$spred-item-l4} / 2.1)
+  &:nth-child(5)
+    top: $spred-item-t5
+    left: $spred-item-l5
+    +phone
+      top: calc(#{$spred-item-t5} / 2.1)
+      left: calc(#{$spred-item-l5} / 2.1)
+  &:nth-child(6)
+    top: $spred-item-t6
+    left: $spred-item-l6
+    +phone
+      top: calc(#{$spred-item-t6} / 2.1)
+      left: calc(#{$spred-item-l6} / 2.1)
+  &:nth-child(7)
+    top: $spred-item-t7
+    left: $spred-item-l8
+    +phone
+      top: calc(#{$spred-item-t7} / 2.1)
+      left: calc(#{$spred-item-l7} / 2.1)
+  &:nth-child(8)
+    top: $spred-item-t8
+    left: $spred-item-l8
+    +phone
+      top: calc(#{$spred-item-t8} / 2.1)
+      left: calc(#{$spred-item-l8} / 2.1)
+  &:last-child
+    top: $spred-item-t9
+    left: $spred-item-l9
+    +phone
+      top: calc(#{$spred-item-t9} / 2.1)
+      left: calc(#{$spred-item-l9} / 2.1)
+
+.link-it
+  display: inline-block
+  color: #fcd66c
+  text-decoration: none
+  &:hover, &:active
+    color: #fcd66c
+    text-decoration: none
+
