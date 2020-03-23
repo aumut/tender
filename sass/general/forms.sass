@@ -57,3 +57,35 @@ $form-group-mb: 10px
 .form-label
   width: 100%
   margin-bottom: 0
+
+.ic-user
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    display: inline-block
+    top: 50%
+    left: 10px
+    width: 20px
+    height: 20px
+    background:
+      color: transparent
+      image: url("../images/ic_icon_name.svg")
+      size: contain
+      repeat: no-repeat
+
+  &.username
+    &:before
+      width: $username-ic-width
+      height: $username-ic-height
+      margin-left: calc(#{$username-ic-width} / 2)
+      margin-top: calc(-#{$username-ic-height} / 2)
+      background-image: url("../images/ic_icon_name.svg")
+
+  &.userphone
+    &:before
+      width: $userphone-ic-width
+      height: $userphone-ic-height
+      margin-left: calc(#{$userphone-ic-width} / 2)
+      margin-top: calc(-#{$userphone-ic-height} / 2)
+      background-image: url("../images/ic_icon_phone.svg")
