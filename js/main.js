@@ -1,4 +1,5 @@
 $(function() {
+
 // menu mobile
     $('#btn_gamburg').click(function () {
         $('.header__nav').toggleClass('active');
@@ -43,17 +44,31 @@ $(function() {
     }
 
 //tender sum
-    let tender_count = document.getElementById("tender_count");
-    let tender_sum = document.getElementById("tender_sum");
 
-    tender_count.value = 1105;
-    tender_count.sum = 0;
+    const fetchPromise = fetch("http://api.tender-smart.com/request/v1/tenders/widget/statistic/");
+    let mainContent = '';
+    let main = document.querySelector('#tender_score');
 
-    let tender_count_value = tender_count.value;
-    let tender_sum_value = tender_count_value * 1055;
-
-    tender_count.innerHTML = formatDigit(tender_count_value);
-    tender_sum.innerHTML = formatDigit(tender_sum_value);
+    fetchPromise.then(response => {
+        return response.json();
+    }).then(films => {
+        //Object.keys(films).forEach(film => {
+            mainContent+=`
+                <div class="tender-score__in tender-score__in--red">
+                    Найдено тендеров:
+                    <div class="tender-score__count" id="tender_count">${formatDigit(films.count)}</div>
+                    <div class="tender-score__label" id="cur_date">${films.date}</div>
+                </div>
+                <div class="tender-score__in tender-score__in--blue">
+                    На общую <br>сумму:
+                    <div class="tender-score__count" id="tender_sum">${formatDigit(films.total)}</div>
+                    <div class="tender-score__label">Сом</div>
+                </div>
+            `;
+        //});
+        console.log(films);
+        main.innerHTML = mainContent;
+    });
 
     function formatDigit(n){
         var s = String(n);
@@ -71,21 +86,7 @@ $(function() {
 
     }
 
-//current date
-    const monthNames = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
-    function GetTodayDate() {
-        var tdate = new Date();
-        var dd = tdate.getDate(); // day
-        var MM = monthNames[tdate.getMonth()]; // month
-        var yyyy = tdate.getFullYear(); // year
-        var currentDate= dd + "." + MM + "." + yyyy;
-        return currentDate;
-    }
-    let cur_date =  document.getElementById("cur_date");
-    cur_date.innerHTML = GetTodayDate();
-
 // phone field
     $(".send_user_phone").mask("+999 (999)99-99-99");
-
 
 });
