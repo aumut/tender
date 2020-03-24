@@ -52,21 +52,18 @@ $(function() {
     fetchPromise.then(response => {
         return response.json();
     }).then(films => {
-        //Object.keys(films).forEach(film => {
-            mainContent+=`
-                <div class="tender-score__in tender-score__in--red">
-                    Найдено тендеров:
-                    <div class="tender-score__count" id="tender_count">${formatDigit(films.count)}</div>
-                    <div class="tender-score__label" id="cur_date">${films.date}</div>
-                </div>
-                <div class="tender-score__in tender-score__in--blue">
-                    На общую <br>сумму:
-                    <div class="tender-score__count" id="tender_sum">${formatDigit(films.total)}</div>
-                    <div class="tender-score__label">Сом</div>
-                </div>
-            `;
-        //});
-        console.log(films);
+        mainContent+=`
+            <div class="tender-score__in tender-score__in--red">
+                Найдено тендеров:
+                <div class="tender-score__count" id="tender_count">${formatDigit(films.count)}</div>
+                <div class="tender-score__label" id="cur_date">${films.date}</div>
+            </div>
+            <div class="tender-score__in tender-score__in--blue">
+                На общую <br>сумму:
+                <div class="tender-score__count" id="tender_sum">${formatDigit(films.total)}</div>
+                <div class="tender-score__label">Сом</div>
+            </div>
+        `;
         main.innerHTML = mainContent;
     });
 
