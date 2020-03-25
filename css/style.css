@@ -298,6 +298,9 @@ h4 {
   animation: sheens 3s infinite;
   z-index: 1; }
 
+.modal-dialog {
+  text-align: center; }
+
 .form-control {
   display: block;
   width: 100%;
@@ -1370,6 +1373,9 @@ h4 {
       transform: rotate(24deg) rotateX(180deg);
       bottom: -59px;
       right: 25px; } }
+
+.modal .appl-form:after, .modal .appl-form:before {
+  display: none; }
 
 .mission-bl {
   display: block;
