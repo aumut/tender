@@ -90,6 +90,7 @@ $(function() {
     let toTop = $('#to-top');
 
     $(window).scroll(function() {
+        console.log("xxxx");
         if ($(window).scrollTop() > 300) {
             toTop.addClass('show');
         } else {
