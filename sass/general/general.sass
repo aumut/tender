@@ -4,7 +4,6 @@
     outline: none !important
 
 html
-  overflow: hidden
   font-size: $fontSizeMain
 
 body
@@ -261,3 +260,31 @@ h4
   +justify-content(center)
   +align-items(center)
   min-height: calc(100% - 60px)
+
+//to-top button
+.to-top
+  display: inline-block
+  background-color: $logo-blue
+  width: 40px
+  height: 40px
+  padding: 0px
+  text-align: center
+  +border_radius(50%)
+  position: fixed
+  bottom: 130px
+  right: 40px
+  transition: background-color .3s, opacity .5s, visibility .5s
+  opacity: 0
+  visibility: hidden
+  z-index: 1000
+  &::after
+    content: ""
+    width: 0
+    height: 0
+    border-left: 10px solid transparent
+    border-right: 10px solid transparent
+    border-bottom: 10px solid $btn-color
+  &.show
+    opacity: 1
+    visibility: visible
+    line-height: 10px

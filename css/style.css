@@ -44,7 +44,6 @@
   outline: none !important; }
 
 html {
-  overflow: hidden;
   font-size: 16px; }
 
 body {
@@ -318,6 +317,35 @@ h4 {
   -moz-align-items: center;
   align-items: center;
   min-height: calc(100% - 60px); }
+
+.to-top {
+  display: inline-block;
+  background-color: #009bf9;
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  text-align: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 130px;
+  right: 40px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000; }
+  .to-top::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #000000; }
+  .to-top.show {
+    opacity: 1;
+    visibility: visible;
+    line-height: 10px; }
 
 .form-control {
   display: block;
