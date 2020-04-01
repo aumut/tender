@@ -30,11 +30,11 @@ $(function() {
 
 //slider
     let wwidth= $(window).width();
-    if (wwidth<1199 )
+    if (wwidth<425 )
     {
-        $('.mission__info').slick({
+        $('.mission__list').slick({
             dots: true,
-            autoplay: true,
+            autoplay: false,
             arrows: false,
             adaptiveHeight: true,
             infinite: true,
@@ -90,7 +90,6 @@ $(function() {
     let toTop = $('#to-top');
 
     $(window).scroll(function() {
-        console.log("xxxx");
         if ($(window).scrollTop() > 300) {
             toTop.addClass('show');
         } else {

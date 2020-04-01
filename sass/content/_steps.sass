@@ -4,6 +4,11 @@
   &--grey
     background-color: #f2f0fd
 
+  .container
+    +phone
+      padding-right: 0px
+      padding-left: 0px
+
 .steps
   +flexbox
   +justify-content(space-between)
@@ -12,7 +17,7 @@
     +flex-wrap(wrap)
     +justify-content(center)
   +phone
-    padding: 15px 10px
+    padding: 15px 0px
 
 
 .steps-item
@@ -119,6 +124,8 @@
   +tablet
     width: 100%
     padding: 0 0px 20px
+  +phone
+    margin: 10px 16px
 
 .magnet
   &:before

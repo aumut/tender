@@ -3,6 +3,11 @@
   +phone
     padding: 0px 0px 30px 0
 
+  .container
+    +phone
+      padding-left: 0px
+      padding-right: 0px
+
 .phone-appl-in
   +flexbox
   +flex-direction(row)
@@ -17,6 +22,11 @@
   +tablet
     +flex-direction(column)
     width: 100%
+  +phone
+    padding-left: 15px
+    padding-right: 15px
+    margin: 0px
+    width: 100%
 
 .phone-appl
   +flexbox
@@ -24,7 +34,7 @@
   +justify-content(flex-start)
   +align-items(center)
   width: 350px
-  min-width: 350px
+  min-width: calc(320px - 15px*2)
   height: 390px
   +border_radius(8px)
   border: 1px solid #e8e8e8
@@ -41,6 +51,7 @@
     margin-bottom: 30px
   +phone
     margin-bottom: 10px
+    width: 100%
 
 .phone-appl__title
   color: #2498f2
