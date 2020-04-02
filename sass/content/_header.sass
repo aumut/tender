@@ -28,7 +28,7 @@
   list-style: none
   margin-bottom: 0
   padding: 0px
-  +tablet
+  +ipad
     +flex-direction(column)
   &__item
     font-family: $fontRobotoLight
@@ -36,18 +36,18 @@
     line-height: $menu-link-lh
     //margin-right: $menu-link-mr
     margin-right: 35px
-    +tablet
+    +ipad
       font-size: 16px
       font-family: $fontRobotoLight
       line-height: 34px
   &__link
     color: $menu-link-color
-    +tablet
+    +ipad
       color: #bebebe
     &:hover, &:active
       text-decoration: none
       color: $logo-blue
-      +tablet
+      +ipad
         color: #FFFFFF
 
 .contacts
@@ -94,7 +94,7 @@
     &__item
       +medium
         margin-right: 20px
-    +tablet
+    +ipad
       margin-bottom: 30px
   .contacts-wa
     margin-top: 3px
@@ -104,18 +104,18 @@
     display: none
     width: 93%
     margin-bottom: 20px
-    +tablet
+    +ipad
       +flexbox
       +flex-direction(column)
       +align-items(center)
   .msg-menu
     display: none
-    +tablet
+    +ipad
       +flexbox
 
 
 .wrap-header .container
-  +tablet
+  +ipad
     position: relative
   +phone
     padding-left: 0px
@@ -124,10 +124,10 @@
 .header
   .btn-gamburg, .btn-close
     display: none
-    +tablet
+    +ipad
       display: block
   .btn-gamburg
-    +tablet
+    +ipad
       position: absolute
       top: 0px
       left: -115px
@@ -136,7 +136,7 @@
       left: 0px
   .btn-close
     display: none
-    +tablet
+    +ipad
       display: block
       position: absolute
       top: 15px
@@ -145,7 +145,7 @@
 .menu-wrap
   +flexbox
   +justify-content(flex-start)
-  +tablet
+  +ipad
     +flex-direction(column)
     opacity: 0
 
@@ -157,7 +157,7 @@
   flex-grow: 1
   +medium
     margin-left: 0px
-  +tablet
+  +ipad
     position: absolute
     top: 80px
     left: 115px
@@ -171,11 +171,11 @@
 
 
   &.active
-    +tablet
+    +ipad
       z-index: 10
       background-color: #9231ce
     .btn-gamburg
-      +tablet
+      +ipad
         left: -115px
       +phone
         display: none

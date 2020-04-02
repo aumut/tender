@@ -34,11 +34,11 @@ $(function() {
     {
         $('.mission__list').slick({
             dots: true,
-            autoplay: false,
+            autoplay: true,
             arrows: false,
             adaptiveHeight: true,
             infinite: true,
-            speed: 300,
+            speed: 500,
             slidesToShow: 1
         });
     }

@@ -33,7 +33,7 @@
   position: relative
   margin-bottom: 107px
 
-  +tablet
+  +ipad
     width: 100%
   +phone
     padding: 30px 10px 15px 20px
@@ -88,7 +88,7 @@
     +flex(row)
     +justify-content(center)
     +align-self(center)
-    +tablet
+    +ipad
       +flex-direction(column)
 
   &__capture
@@ -109,13 +109,13 @@
     color: #6e6d73
     font-family: $fontRobotoLight
     line-height: 20px
-    +tablet
+    +ipad
       margin-bottom: 90px
 
   &__img
     +align-self(center)
     margin-top: -15px
-    +tablet
+    +ipad
       +align-self(center)
       position: absolute
       bottom: 8px
@@ -127,7 +127,7 @@
       height: 431px
       +rotate(20)
 
-      +tablet
+      +ipad
         width: 150px
         height: auto
 
@@ -141,8 +141,10 @@
   margin: 0px
   padding: 0px
   margin-top: 40px
-  +tablet
+  +ipad
     width: 100%
+    margin-top: 55px
+  +phone
     margin-top: 10px
 
 .mission__item
@@ -174,13 +176,14 @@
     min-height: 240px
     padding-top: 55px
 
-  +tablet
+  +ipad
     margin-left: 0px
     margin-right: 50px
     margin-bottom: 65px
     max-width: 333px
-    min-height: 185px
-    padding-top: 15px
+    min-height: 205px
+    //padding-top: 15px
+    padding-top: 35px
 
   +phone
     min-width: 100%
@@ -241,7 +244,7 @@
   letter-spacing: 0.3px
   line-height: 28px
   padding: 37px 152px 85px 0
-  +tablet
+  +ipad
     padding: 0px 0px 22px 0px
     text-align: center
 
@@ -315,13 +318,13 @@
   +justify-content(center)
   +align-items(center)
   +align-self(flex-start)
-  +tablet
+  +ipad
     margin-bottom: 10px
 
 .mission
   .slogan-wrap
     +align-self(center)
-    +tablet
+    +ipad
       +align-self(center)
 
 
@@ -331,9 +334,16 @@
     min-height: auto
     min-width: auto
     max-width: calc(100% - 30px)
-    padding: 30px 23px 15px 35px
+    //padding: 30px 23px 15px 35px
+    padding: 47px 23px 15px 35px
     margin-right: 0px
     margin-bottom: 3px
+    +phone
+      min-height: 195px
+    +phone_1
+      min-height: 202px
+    +phone_min
+      min-height: 250px
 
 .mission
   .slick-initialized .slick-slide
