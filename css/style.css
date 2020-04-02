@@ -1646,6 +1646,9 @@ h4 {
       right: 136px;
       width: 90px;
       height: 51px; } }
+  @media screen and (max-width: 320px) {
+    .magnet:before {
+      right: 60px; } }
 
 .steps-item--t {
   width: 547px;
@@ -1685,6 +1688,9 @@ h4 {
       right: 90px;
       width: 209px;
       height: 129px; } }
+  @media screen and (max-width: 320px) {
+    .elephant:before {
+      right: 10px; } }
 
 .steps-item--fh {
   padding: 60px 52px 0;
@@ -2136,7 +2142,9 @@ h4 {
     line-height: 1; }
     @media screen and (max-width: 425px) {
       .mission__footer .title {
-        margin-bottom: 3px; } }
+        width: 100%;
+        margin-bottom: 3px;
+        text-align: center; } }
 
 .slogan {
   width: 300px;
@@ -2171,6 +2179,9 @@ h4 {
   @media screen and (max-width: 425px) {
     .slogan {
       font-size: 16px; } }
+  @media screen and (max-width: 320px) {
+    .slogan {
+      width: 250px; } }
   .slogan .tooltip_info {
     display: inline-block;
     width: 20px;
