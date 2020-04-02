@@ -32,8 +32,10 @@
     +tablet
       width: 317px
       height: 324px
-      bottom: -90px
       top: unset
+      bottom: -90px
+      left: calc(50% + 25px)
+    +phone
       left: calc(50% - 317px / 2)
 
 .banner-money
@@ -62,9 +64,11 @@
       height: 212px
       top: unset
       bottom: -30px
-      //left: 50px
-      left: calc(50% - 278px / 2)
+      left: calc(50% + 40px)
       right: unset
+    +phone
+      left: calc(50% - 278px / 2)
+
 
   .btn
     width: $banner-btn-width
@@ -91,10 +95,15 @@
     top: 120px
     +tablet
       right: 65px
-      top: 215px
+      top: 253px
     +phone
-      right: 130px
-      top: 230px
+      right: 20px
+      top: 196px
+    +phone_1
+      right: 127px
+      top: 236px
+    +phone_min
+      right: 70px
 
 .wrap-header
   width: 100%
@@ -157,7 +166,7 @@
   +flexbox
   margin-bottom: 50px
   +phone
-    margin-bottom: 40px
+    margin-bottom: 15px
   &__in
     width: $tender-score-width
     height: $tender-score-height

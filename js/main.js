@@ -30,7 +30,7 @@ $(function() {
 
 //slider
     let wwidth= $(window).width();
-    if (wwidth<425 )
+    if (wwidth <= 425 )
     {
         $('.mission__list').slick({
             dots: true,

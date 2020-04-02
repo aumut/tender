@@ -834,7 +834,7 @@ h4 {
       left: 115px;
       width: 50%;
       margin: 0px;
-      padding: 32px 70px 60px; } }
+      padding: 32px 70px 90px; } }
   @media screen and (max-width: 425px) {
     .header__nav {
       width: 100%;
@@ -903,8 +903,11 @@ h4 {
       .banner-comp:after {
         width: 317px;
         height: 324px;
-        bottom: -90px;
         top: unset;
+        bottom: -90px;
+        left: calc(50% + 25px); } }
+    @media screen and (max-width: 425px) {
+      .banner-comp:after {
         left: calc(50% - 317px / 2); } }
 
 .banner-money {
@@ -934,8 +937,11 @@ h4 {
         height: 212px;
         top: unset;
         bottom: -30px;
-        left: calc(50% - 278px / 2);
+        left: calc(50% + 40px);
         right: unset; } }
+    @media screen and (max-width: 425px) {
+      .banner-money:before {
+        left: calc(50% - 278px / 2); } }
   .banner-money .btn {
     width: 333px; }
     @media screen and (max-width: 425px) {
@@ -968,11 +974,18 @@ h4 {
     @media screen and (max-width: 768px) {
       .banner-money .time-label {
         right: 65px;
-        top: 215px; } }
+        top: 253px; } }
     @media screen and (max-width: 425px) {
       .banner-money .time-label {
-        right: 130px;
-        top: 230px; } }
+        right: 20px;
+        top: 196px; } }
+    @media screen and (max-width: 375px) {
+      .banner-money .time-label {
+        right: 127px;
+        top: 236px; } }
+    @media screen and (max-width: 320px) {
+      .banner-money .time-label {
+        right: 70px; } }
 
 .wrap-header {
   width: 100%;
@@ -1080,7 +1093,7 @@ h4 {
   margin-bottom: 50px; }
   @media screen and (max-width: 425px) {
     .tender-score {
-      margin-bottom: 40px; } }
+      margin-bottom: 15px; } }
   .tender-score__in {
     width: 100px;
     height: 120px;
@@ -1283,7 +1296,8 @@ h4 {
   @media screen and (max-width: 425px) {
     .appl-form {
       width: 100%;
-      padding: 50px 35px; } }
+      padding: 50px 35px;
+      height: 405px; } }
   .appl-form .form-control {
     -moz-box-shadow: 0px 12px 16px 0px rgba(0, 0, 0, 0.21);
     -webkit-box-shadow: 0px 12px 16px 0px rgba(0, 0, 0, 0.21);
@@ -1554,7 +1568,8 @@ h4 {
     background-size: cover; }
     @media screen and (max-width: 425px) {
       .quote:before {
-        left: 6px; } }
+        left: 16px;
+        top: -24px; } }
 
 .footnote {
   display: inline-block;
@@ -1594,8 +1609,8 @@ h4 {
 
 .steps-item__text {
   font-size: 16px;
-  line-height: 1.4;
-  letter-spacing: 0.2px;
+  line-height: 23px;
+  letter-spacing: 0.3px;
   margin-bottom: 38px; }
   @media screen and (max-width: 425px) {
     .steps-item__text {
@@ -1611,7 +1626,7 @@ h4 {
       padding: 0 0px 20px; } }
   @media screen and (max-width: 425px) {
     .steps-item--s {
-      margin: 10px 16px; } }
+      margin: 22px 12px; } }
 
 .magnet:before {
   content: "";
@@ -1627,8 +1642,8 @@ h4 {
   background-size: cover; }
   @media screen and (max-width: 425px) {
     .magnet:before {
-      top: 55px;
-      right: 140px;
+      top: 46px;
+      right: 136px;
       width: 90px;
       height: 51px; } }
 
@@ -1681,7 +1696,7 @@ h4 {
       margin: 0px; } }
   @media screen and (max-width: 425px) {
     .steps-item--fh {
-      padding: 63px 23px 58px;
+      padding: 47px 23px 7px;
       margin-top: 6px; } }
 
 .ava {
@@ -1732,6 +1747,9 @@ h4 {
   background-image: url("../upload/bg_mission.png");
   background-repeat: no-repeat;
   background-size: contain; }
+  @media screen and (max-width: 425px) {
+    .mission_wrap {
+      padding-top: 28px; } }
 
 .mission {
   margin-top: 50px;
@@ -1913,11 +1931,9 @@ h4 {
       -webkit-align-self: center;
       -moz-align-self: center;
       -ms-flex-item-align: center;
-      align-self: center; } }
-  @media screen and (max-width: 768px) {
-    .mission__img {
+      align-self: center;
       position: absolute;
-      bottom: 50px;
+      bottom: 8px;
       left: calc(50% - 220px);
       z-index: 1; } }
   .mission__img img {
@@ -1958,7 +1974,8 @@ h4 {
   margin-top: 40px; }
   @media screen and (max-width: 768px) {
     .mission__list {
-      width: 100%; } }
+      width: 100%;
+      margin-top: 10px; } }
 
 .mission__item {
   max-width: 333px;
@@ -2018,8 +2035,8 @@ h4 {
       margin-bottom: 60px;
       margin-right: 0px;
       max-width: 270px;
-      min-height: 240px;
-      padding-top: 55px; } }
+      min-height: 185px;
+      padding-top: 33px; } }
   .mission__item .title {
     color: #000000;
     letter-spacing: 0.6px;
@@ -2100,6 +2117,7 @@ h4 {
   align-self: flex-end;
   font-family: "Roboto-Light";
   letter-spacing: 0.3px;
+  line-height: 28px;
   padding: 37px 152px 85px 0; }
   @media screen and (max-width: 768px) {
     .mission__footer {
@@ -2107,7 +2125,11 @@ h4 {
       text-align: center; } }
   .mission__footer .title {
     letter-spacing: 1px;
-    margin-bottom: 9px; }
+    margin-bottom: 9px;
+    line-height: 1; }
+    @media screen and (max-width: 425px) {
+      .mission__footer .title {
+        margin-bottom: 3px; } }
 
 .slogan {
   width: 300px;
@@ -2214,7 +2236,7 @@ h4 {
   align-self: flex-start; }
   @media screen and (max-width: 768px) {
     .slogan-wrap {
-      margin-bottom: 50px; } }
+      margin-bottom: 10px; } }
 
 .mission .slogan-wrap {
   -webkit-align-self: center;
@@ -2521,7 +2543,7 @@ h4 {
       background: #2498f2; } }
   @media screen and (max-width: 425px) {
     .spred-wrap {
-      padding: 40px 0px; } }
+      padding: 50px 0px 40px; } }
   @media screen and (max-width: 425px) {
     .spred-wrap .container {
       padding: 0px 15px; } }
@@ -2586,7 +2608,7 @@ h4 {
   @media screen and (max-width: 425px) {
     .spred-item {
       width: 100%;
-      margin-top: 22px;
+      margin-top: 45px;
       margin-bottom: 36px; } }
 
 .spred-item__title {
