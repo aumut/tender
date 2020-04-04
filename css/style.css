@@ -637,6 +637,7 @@ h4 {
     line-height: 1;
     margin-right: 35px;
     padding: 5px 8px;
+    background-color: #e7e7e7;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
     border-radius: 12px; }
