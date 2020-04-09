@@ -729,7 +729,7 @@ h4 {
       margin-top: 0px; } }
 @media screen and (max-width: 1024px) {
   .header .menu__item {
-    margin-right: 20px; } }
+    margin-right: 15px; } }
 @media screen and (max-width: 834px) {
   .header .menu {
     margin-bottom: 30px; } }
@@ -772,10 +772,6 @@ h4 {
 @media screen and (max-width: 834px) {
   .wrap-header .container {
     position: relative; } }
-@media screen and (max-width: 425px) {
-  .wrap-header .container {
-    padding-left: 0px;
-    padding-right: 0px; } }
 
 .header .btn-gamburg, .header .btn-close {
   display: none; }
@@ -790,7 +786,7 @@ h4 {
 @media screen and (max-width: 425px) {
   .header .btn-gamburg {
     top: 75px;
-    left: 0px; } }
+    left: 15px; } }
 .header .btn-close {
   display: none; }
   @media screen and (max-width: 834px) {
@@ -957,6 +953,10 @@ h4 {
         -ms-flex-item-align: center;
         align-self: center;
         width: calc(100% - 20px); } }
+    @media screen and (max-width: 320px) {
+      .banner-money .btn {
+        width: 100%;
+        font-size: 16px; } }
   .banner-money .title {
     margin-bottom: 25px;
     line-height: 62px;
@@ -1459,10 +1459,6 @@ h4 {
   background-color: #FFFFFF; }
 .steps-wrap--grey {
   background-color: #f2f0fd; }
-@media screen and (max-width: 425px) {
-  .steps-wrap .container {
-    padding-right: 0px;
-    padding-left: 0px; } }
 
 .steps {
   display: -webkit-box;
@@ -2854,9 +2850,6 @@ h4 {
   @media screen and (max-width: 425px) {
     .footer-wrap {
       padding-top: 30px; } }
-  .footer-wrap .container {
-    padding-left: 0px;
-    padding-right: 0px; }
 
 .footer {
   display: -webkit-box;
