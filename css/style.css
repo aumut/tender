@@ -836,16 +836,20 @@ h4 {
       left: 115px;
       width: 50%;
       margin: 0px;
-      padding: 32px 70px 90px; } }
+      padding: 32px 70px 90px;
+      height: 0px; } }
   @media screen and (max-width: 425px) {
     .header__nav {
-      width: 100%;
       top: 0px;
       left: 0px; } }
   @media screen and (max-width: 834px) {
     .header__nav.active {
       z-index: 10;
-      background-color: #9231ce; } }
+      background-color: #9231ce;
+      height: auto; } }
+  @media screen and (max-width: 425px) {
+    .header__nav.active {
+      width: 100%; } }
   @media screen and (max-width: 834px) {
     .header__nav.active .btn-gamburg {
       left: -115px; } }
@@ -983,15 +987,16 @@ h4 {
         top: 253px; } }
     @media screen and (max-width: 425px) {
       .banner-money .time-label {
-        right: 20px;
-        top: 196px; } }
+        right: 90px;
+        top: 230px; } }
     @media screen and (max-width: 375px) {
       .banner-money .time-label {
-        right: 127px;
+        right: 90px;
         top: 236px; } }
     @media screen and (max-width: 320px) {
       .banner-money .time-label {
-        right: 70px; } }
+        right: 0;
+        top: 274px; } }
 
 .wrap-header {
   width: 100%;

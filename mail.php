@@ -1,7 +1,7 @@
 <?php
 header("Content-Type: text/html; charset=utf-8");
 
-if(isset($_POST['user_phone'])) {
+if(isset($_POST['submit'])) {
 	
 $email = "tendersmar@gmail.com"; #Email, на него придут письма
 $title = "Заявка c kgt.kg"; #Заголовок письма
