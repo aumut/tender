@@ -3,9 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
-	<link rel="stylesheet" href="css/bootstrap-modal.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 	<link rel="stylesheet" href="css/style.css">
@@ -13,370 +11,417 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-3.1.0.min.js"   integrity="sha256-ycJeXbll9m7dHKeaPbXBkZH8BuP99SmPm/8q5O+SbBc="   crossorigin="anonymous"></script>
 	<script type="text/javascript" src="slick/slick.min.js"></script>
 	<script type="text/javascript" src="js/jquery.inputmask.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<title>Smart tender</title>
 </head>
 <body>
 <div class="body_wrap">
-<div class="wrap-header">
-	<div class="container">
-		<div class="header">
-			<div class="logo"><a href="#banner" class="logo__link"><span class="logo__text--blue">Smart</span><span class="logo__text--grey">Tender</span></a></div>
-			<div class="header__nav">
-				<button type="button" class="btn btn-gamburg" id="btn_gamburg">Меню</button>
-				<div class="menu-wrap">
-					<button type="button" class="btn btn-close" id="btn_close"></button>
-					<ul class="menu header__menu">
-						<li class="menu__item"><a href="#banner" class="menu__link">Главная</a></li>
-						<li class="menu__item"><a href="#spred" class="menu__link">О платформе</a></li>
-						<li class="menu__item"><a href="#feature" class="menu__link">Для кого</a></li>
-						<li class="menu__item"><a href="#steps" class="menu__link">Плюсы</a></li>
-						<li class="menu__item"><a href="#appl" class="menu__link">Беслатная подписка</a></li>
-						<li class="menu__item"><a href="#contacts" class="menu__link">Конакты</a></li>
-					</ul>
-					<div class="flex-center contact-ph">
-						<span class="contact-ic contact-ph__text">Телефон</span>
-						<a href="tel:0706990115" class="contact-ph__link">+996 (706) 99 01 15</a>
-						<a href="tel:0554990115" class="contact-ph__link">+996 (554) 99 01 15</a>						
-					</div>
-					<ul class="msg-menu">
-						<li class="msg-menu__item"><a href="https://api.whatsapp.com/send?phone=996554990115"><span class="whatsapp"></span></a></li>
-						<li class="msg-menu__item"><a href="#" class="telegram"></a></li>
-						<li class="msg-menu__item"><a href="#" class="instagram"></a></li>
-						<li class="msg-menu__item"><a href="#" class="facebook"></a></li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="contacts">
-				<span class="contacts__text">Есть вопросы?</span>
-				<a href="https://api.whatsapp.com/send?phone=996554990115" class="contacts-wa">
-					<span class="whatsapp"></span><span>Поддержка в WhatsApp</span>
-				</a>
-				<a href="tel:055499 01 15" class="contacts__phone">0554 99 01 15</a>
-			</div>
-		</div>
-		<div class="banner banner-comp banner-money" id="banner">
-			<div class="tender-score" id="tender_score"></div>
-			<h1 class="title title--bold">платформа нового поколения  для поиска тендеров</h1>
-			<h4 class="title--sub">Поиск тендеров по всему Кыргызстану, детальная аналитика, управление закупками и людьми —<span class="highlighted"> всё в одной системе! </span></h4>
-			<button type="button" class="btn btn--ic">
-				<div class="button__blik" data-toggle="modal" data-target="#appFormModal">Начать 14 дней бесплатно</div>
-				<span class="btn__ic"></span>
-			</button>
-			<div class="time-label">
-				<div class="inner">
-					<span class="time-label__digit">14</span>
-					<span class="time-label__text">дней<br>бесплатно</span>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="feature-wrap" id="feature">
-	<div class="container">
-		<div class="feature-in">
-			<h2 class="title">Если вы-</h2>
-			<div class="wrap">
-				<div class="left-side">
-					<ul class="features">
-						<li class="features__item"><i class="features__ic features__ic--money"></i><span>Хотите получать информацию <b>удобным для вас способом</b></span></li>
-						<li class="features__item"><i class="features__ic features__ic--clipboard"></i><span>Анализируете <b>вручную огромный  массив</b> информации</span></li>
-						<li class="features__item"><i class="features__ic features__ic--pros_cons"></i><span><b>Устали тратить время</b> на поиск новых контрактов</span></li>
-						<li class="features__item"><i class="features__ic features__ic--certif"></i><span>Работаете на рынке <b>государственных  закупок</b></span></li>
-					</ul>
-					<div class="info slogan-wrap arrow">
-						<div class="slogan"><span>Список можно продолжать очень долго. TenderSmart способен еще на больше</span></div>
-						<div class="shadow"></div>
-						<div class="shadow2"></div>
-					</div>
-
-				</div>
-				<div class="right-side">
-					<div class="appl-form">
-						<h3 class="appl-form__title">Оставьте свой номер, <br> мы расскажем вам еще больше</h3>
-						<form action="mail.php" method="POST" id="appl_form" class="appl-form__form">
-							<div class="form-group">
-								<label class="form-label username ic-user">
-									<input type="text" name="user_name" class="form-control" placeholder="Ваше имя">
-								</label>
-							</div>
-							<div class="form-group">
-								<label class="form-label userphone ic-user">
-									<input type="text" name="user_phone" class="form-control" placeholder="Ваш телефон">
-								</label>
-							</div>
-							<div class="form-group">
-								<button type="submit" name="submit" class="btn"><span class="button__blik">Отправить</span></button>
-							</div>
-						</form>
-						<div class="appl-form__footer">
-							<i class="line"></i>
-							<a href="tel:055499 01 15" class="appl-form__phone">0554 99 01 15</a>
-							<span class="appl-form__text">Ежедневно с 9.00 до 18.00</span>
+	<div class="wrap-header">
+		<div class="container">
+			<div class="header">
+				<div class="logo"><a href="#banner" class="logo__link"><span class="logo__text--blue">Smart</span><span class="logo__text--grey">Tender</span></a></div>
+				<div class="header__nav">
+					<button type="button" class="btn btn-gamburg" id="btn_gamburg">Меню</button>
+					<div class="menu-wrap">
+						<button type="button" class="btn btn-close" id="btn_close"></button>
+						<ul class="menu header__menu">
+							<li class="menu__item"><a href="#banner" class="menu__link">Главная</a></li>
+							<li class="menu__item"><a href="#spred" class="menu__link">О платформе</a></li>
+							<li class="menu__item"><a href="#feature" class="menu__link">Для кого</a></li>
+							<li class="menu__item"><a href="#steps" class="menu__link">Плюсы</a></li>
+							<li class="menu__item"><a href="#appl" class="menu__link">Беслатная подписка</a></li>
+							<li class="menu__item"><a href="#contacts" class="menu__link">Конакты</a></li>
+						</ul>
+						<div class="flex-center contact-ph">
+							<span class="contact-ic contact-ph__text">Телефон</span>
+							<a href="tel:0706990115" class="contact-ph__link">+996 (706) 99 01 15</a>
+							<a href="tel:0554990115" class="contact-ph__link">+996 (554) 99 01 15</a>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="mission_wrap">
-	<div class="container">
-		<div class="mission">
-			<div class="mission-bl">
-				<h3 class="title">наша миссия</h3>
-				<h4 class="subtitle">Сделать поиск тендеров быстрым, удобным и современным</h4>
-			</div>
-			<div class="mission__in">
-				<div class="mission__capture">
-					<h2 class="title">
-						<span class='blue_text'>tender smart</span> собрал для вас <span class='highlighted'>весь смак</span>
-					</h2>
-					<div class="mission__description">
-						<span class="blue_text">Tender Smart</span> ежедневно мониторит все основные коммерческие и государственные торговые площадки и скачивает в свою базу все новые тендеры
-					</div>
-					<div class="mission__img">
-						<img src="upload/time_is_money.png" alt="time is money">
-					</div>
-					<div class="slogan-wrap">
-						<div class="slogan dollar">
-							<span>Наша платформа сохранит вам время, деньги и нервы</span>
-						</div>
-						<div class="shadow"></div>
-						<div class="shadow2"></div>
-					</div>
-				</div>
-				<ul class="mission__list">
-					<li class="mission__item research">
-						<h3 class="title">поиск тендеров</h3>
-						<span>Экономьте время на поиски государственных и коммерческих тендеров, используя фильтры и автопиоск</span>
-						<a href="#" class="ask_question">Задать вопрос</a>
-					</li>
-					<li class="mission__item bar_chart">
-						<h3 class="title">Аналитика рынка</h3>
-						<span>Анализируйте, изучайте историю тендеров заказчиков и конкурентов для оценки своих перспектив в нише</span>
-						<a href="#" class="ask_question">Задать вопрос</a>
-					</li>
-					<li class="mission__item profile">
-						<h3 class="title">Лента</h3>
-						<span>Настраивайте свою ленту по интересам и получайте решения, которые будут интересны именно вам</span>
-						<a href="#" class="ask_question">Задать вопрос</a>
-					</li>
-					<li class="mission__item resume">
-						<h3 class="title">CRM система</h3>
-						<span>Контролируйте свою команду, следите за эффективностью каждого сотрудника</span>
-						<a href="#" class="ask_question">Задать вопрос</a>
-					</li>
-					<li class="mission__item analytics">
-						<h3 class="title">Панель управления</h3>
-						<span>Получите мгновенное представление о ваших тендерных продажах</span>
-						<a href="#" class="ask_question">Задать вопрос</a>
-					</li>
-					<li class="mission__item bar_chart1">
-						<h3 class="title">Гибкие настройки</h3>
-						<span>Настраивайте права доступа для различных групп пользователей с учетом структуры вашей организации</span>
-						<a href="#" class="ask_question">Задать вопрос</a>
-					</li>
-				</ul>
-			</div>
-			<div class="mission__footer">
-				<h3 class="title blue_text">Это только вершина айсберга</h3>
-				<span>Это лишь малая часть того что может <b>TenderSmart</b></span>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="steps-wrap steps-wrap--white" id="steps">
-	<div class="container">
-		<div class="steps">
-			<div class="steps-item steps-item--blue steps-item--f">
-				<p class="phrase quote">Если ты готов, а это означает, что у тебя есть образование и опыт, и ты нашел хорошую сделку, тогда деньги найдут тебя или ты найдешь деньги.</p>
-				<span class="footnote">© Роберт Кийосаки.</span>
-				<div class="ava"><div class="ava__pict"><img src="upload/kijosaki_robert.png" alt=""></div></div>
-			</div>
-			<div class="steps-item steps-item--transp steps-item--row steps-item--s magnet">
-				<span class="steps__num">01</span>
-				<div class="steps-item-wrap">
-					<h4 class="title steps-item__title">а что если</h4>
-					<p class="steps-item__text">Вы или ваша организация решила участвовать в тендере, но у вас недостаточно средств, или организация не хочет отвлекать значительные средства из оборота, то вы сможете обратиться за получением тендерного кредита к Нам.  Мы поможем вам решить финансовые вопросы!</p>
-					<button type="button" class="btn" data-toggle="modal" data-target="#appFormModal"><span class="button__blik">Хочу узнать больше</span></button>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="steps-wrap steps-wrap--grey">
-	<div class="container">
-		<div class="steps">
-			<div class="steps-item steps-item--transp steps-item--row steps-item--t arrow elephant">
-				<span class="steps__num">02</span>
-				<div class="steps-item-wrap">
-					<h4 class="title steps-item__title">или</h4>
-					<p class="steps-item__text">У вас есть деньги и вы не знаете как их приумножить? У вас мало времени и полно забот, и вам хочется зарабатывать больше. Тогда Вам срочно нужно прийти к нам в офис. Мы с вами организуем выгодное сотрудничество, вам даже не придется тратить на это ваше время, мы все сделаем сами.  Мы ждем вас!</p>
-				</div>
-			</div>
-			<div class="steps-item steps-item--blue steps-item--fh">
-				<p class="steps-item__text quote">Деньги должны работать всегда! Они и работают, так или иначе. Даже сейчас, когда лежат на счете в банке, вложены в ценные бумаги, фонды, недвижимость или драгоценные металлы. Работают, даже будучи спрятанными под плинтусом или в стеклянной банке. Вопрос лишь в том, насколько хорошо они это делают, и как их заставить работать лучше. Гораздо лучше!</p>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="phone-appl-wrap" id="appl">
-	<div class="container">
-		<div class="phone-appl-in">
-			<div class="phone-appl send-phone-appl">
-				<h3 class="phone-appl__title">Хотите перезвоним?</h3>
-				<div class="phone-appl__subtitle"><b>Заполните форму</b> - мы перезвоним в течении 5 минут и проконсультируем
-					Вас по всем вопросам</div>
-				<div class="phone-appl__text clock">С Пн по ПТ 9.00 - 18.00</div>
-				<form action="mail.php" method="POST" id="phone_appl_form" class="phone-appl__form">
-					<div class="form-group">
-						<label class="form-label ic-user username">
-							<input type="text" name="user_phone" class="form-control send_user_phone" placeholder="+ 996 (___)__ __ __">
-						</label>
-					</div>
-					<div class="form-group">
-						<button type="submit" name="submit" class="btn"><span class="button__blik">Отправить</span></button>
-					</div>
-				</form>
-			</div>
-			<div class="phone-appl call-phone">
-				<h3 class="phone-appl__title ic-phone">Либо звоните нам <br>напрямую прямо сейчас</h3>
-				<span class="phone-appl__item">Мы работаем</span>
-				<a href="tel:0555586358" class="phone-appl-num">+996 (554) 99 01 15</a>
-				<a href="tel:0555586358" class="phone-appl-num">+996 (706) 99 01 15</a>
-				<i class="line"></i>
-				<span class="mb-3px"><b>Или пишите нам</b></span>
-				<span class="phone-appl__item mb-18px">Мы онлайн</span>
-				<div class="phone-appl-msg">
-					<a href="https://api.whatsapp.com/send?phone=996554990115" class="phone-appl-msg__item phone-appl-wa">
-						<span class="whatsapp"></span><span>WhatsApp</span>
-					</a>
-					<a href="https://t.me/S_Sydyk" class="phone-appl-msg__item phone-appl-tl">
-						<span class="telegram"></span><span>Telegram</span>
-					</a>
-				</div>
-			</div>
-			<div class="phone-img"><img src="upload/smartphone_rot.png" alt="call us"></div>
-		</div>
-	</div>
-</div>
-<div class="spred-wrap" id="spred">
-	<div class="container">
-		<div class="spred">
-			<div class="spred-left">
-				<div class="spred-item">
-					<h4 class="title spred-item__title"></h4>
-					<p class="spred-item__text active" data-selected="1">Наша площадка позволяет просматривать все тендера, которые публикуются в Кыргызской Республике. Все Государственные, Частные (Procurement) и с частных компаний</p>
-					<p class="spred-item__text" data-selected="2">Тендера на определенные суммы бюджета, например, с 300 000 сом по 1 000 000 сом, т.е. минимальные тендера это с бюджетом на 300 000 сом, а максимальные 1 000 000 сом.</p>
-					<p class="spred-item__text" data-selected="3">Возможность находит тендера, по ключевым словам, т.е. показывать только те тендера, на которые вы ориентируетесь. Пример вам нужны тендера только по «генераторам» то вам будут показывать тендера, связанные с «генератором»</p>
-					<p class="spred-item__text" data-selected="4">Возможность сортировать и поиск тендеров по датам. С определенной даты по определенный, или же поиск/показ тендеров за: сегодняшний, вчерашний, за прошлую неделю и за последний месяц.</p>
-					<p class="spred-item__text" data-selected="5">Возможность перехода (ссылка) на сам тендер. Возможность перехода на сайт <a href="#www.zakupki.gov.kg" class="link-it">www.zakupki.gov.kg</a>, на страницу самого тендера.</p>
-					<p class="spred-item__text" data-selected="6">После объявления победителя конкурса (если сотрудник выиграл тендер), система позволяет загрузить договора.</p>
-					<p class="spred-item__text" data-selected="7">У каждого сотрудника есть свой "Портфель " где он сохраняет свои тендера, в которых он будет участвовать, так же при добавлении тендера может привязать несколько участников, т.е. за этот тендер отвечают несколько участников.</p>
-					<p class="spred-item__text" data-selected="8">Администраторы учреждений могут просматривать тендера своих сотрудников, в скольких они приняли участие, сколько выиграли</p>
-					<p class="spred-item__text" data-selected="9">Наша площадка позволяет просматривать все тендера, которые публикуются в Кыргызской Республике. Все Государственные, Частные (Procurement) и с частных компаний</p>
-				</div>
-				<form action="mail.php" method="POST" id="phone_appl_form1" class="phone-appl__form">
-					<div class="form-group">
-						<label class="form-label ic-user username">
-							<input type="text" name="user_phone" class="form-control send_user_phone" placeholder="+ 996 (___)__ __ __">
-						</label>
-					</div>
-					<div class="form-group">
-						<button type="submit" name="submit" class="btn"><span class="button__blik">Хочу узнать больше</span></button>
-					</div>
-				</form>
-			</div>
-			<div class="spred-right">
-				<img class="spred-img" src="upload/Trading_Platforms_Hero_device_shot_Optimized.png" alt="trading platforms device">
-				<div class="spred-point">
-					<div class="spred-point-item active" data-selected="1"><div class="spred-point-item__out"><div class="spred-point-item__in"></div></div></div>
-					<div class="spred-point-item" data-selected="2"><div class="spred-point-item__out"><div class="spred-point-item__in"></div></div></div>
-					<div class="spred-point-item" data-selected="3"><div class="spred-point-item__out"><div class="spred-point-item__in"></div></div></div>
-					<div class="spred-point-item" data-selected="4"><div class="spred-point-item__out"><div class="spred-point-item__in"></div></div></div>
-					<div class="spred-point-item" data-selected="5"><div class="spred-point-item__out"><div class="spred-point-item__in"></div></div></div>
-					<div class="spred-point-item" data-selected="6"><div class="spred-point-item__out"><div class="spred-point-item__in"></div></div></div>
-					<div class="spred-point-item" data-selected="7"><div class="spred-point-item__out"><div class="spred-point-item__in"></div></div></div>
-					<div class="spred-point-item" data-selected="8"><div class="spred-point-item__out"><div class="spred-point-item__in"></div></div></div>
-					<div class="spred-point-item" data-selected="9"><div class="spred-point-item__out"><div class="spred-point-item__in"></div></div></div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="footer-wrap" id="contacts">
-	<div class="container">
-		<div class="footer">
-			<div class="footer-row">
-				<p class="footer-text footer-info">Tender Smart ежедневно мониторит все основные коммерческие и государственные торговые площадки и скачивает в свою базу все новые тендеры.</p>
-				<div class="line phone-line"></div>
-				<div class="footer-right">
-					<div class="footer-phone footer-text flex-center contact-ph">
-						<span class="footer-text contact-ic contact-ph__text">Телефон</span>
-						<a href="tel:0554990115" class="contact-ph__link">0554 99 01 15</a>
-						<a href="tel:0706990115" class="contact-ph__link">0706 99 01 15</a>						
-					</div>
-					<div class="line phone-line"></div>
-					<div class="footer-email flex-center contact-email">
-						<span class="footer-text contact-ic">Email</span>
-						<a href="mailto:tendersmar@gmail.com" class="footer-email__text">tender.smart.kg@gmail.com</a>
-						<button type="button" class="btn mob-abs" data-toggle="modal" data-target="#appFormModal"><span class="button__blik">Обратный звонок</span></button>
-					</div>
-					<div class="line phone-line"></div>
-					<div class="footer-msg flex-center contact-msg">
-						<span class="footer-text contact-ic">Мы в социальных сетях:</span>
 						<ul class="msg-menu">
 							<li class="msg-menu__item"><a href="https://api.whatsapp.com/send?phone=996554990115"><span class="whatsapp"></span></a></li>
-							<li class="msg-menu__item"><a href="tg://msg?text=<?php echo urlencode( '<TEXT>' ); ?>&to=<PHONE>" class="telegram"></a></li>
-							<li class="msg-menu__item"><a href="https://www.instagram.com" class="instagram"></a></li>
-							<li class="msg-menu__item"><a href="https://www.facebook.com" class="facebook"></a></li>
+							<li class="msg-menu__item"><a href="#" class="telegram"></a></li>
+							<li class="msg-menu__item"><a href="#" class="instagram"></a></li>
+							<li class="msg-menu__item"><a href="#" class="facebook"></a></li>
 						</ul>
-						<div class="line phone-line"></div>
-						<button type="button" class="btn" data-toggle="modal" data-target="#appFormModal"><span class="button__blik">14 дней бесплатно</span></button>
+					</div>
+				</div>
+
+				<div class="contacts">
+					<span class="contacts__text">Есть вопросы?</span>
+					<a href="https://api.whatsapp.com/send?phone=996554990115" class="contacts-wa">
+						<span class="whatsapp"></span><span>Поддержка в WhatsApp</span>
+					</a>
+					<a href="tel:055499 01 15" class="contacts__phone">0554 99 01 15</a>
+				</div>
+			</div>
+			<div class="banner banner-comp banner-money" id="banner">
+				<div class="tender-score" id="tender_score"></div>
+				<h1 class="title title--bold">платформа нового поколения  для поиска тендеров</h1>
+				<h4 class="title--sub">Поиск тендеров по всему Кыргызстану, детальная аналитика, управление закупками и людьми —<span class="highlighted"> всё в одной системе! </span></h4>
+				<button type="button" class="btn btn--ic" data-toggle="modal" data-target="#sendFormModal">
+					<div class="button__blik">Начать 14 дней бесплатно</div>
+					<span class="btn__ic"></span>
+				</button>
+				<div class="time-label">
+					<div class="inner">
+						<span class="time-label__digit">14</span>
+						<span class="time-label__text">дней<br>бесплатно</span>
 					</div>
 				</div>
 			</div>
-			<div class="line"></div>
-			<div class="footer-row develop-info">
-				<div>© 2020 Все права защищены.</div>
-				<div>Разработка сайта <span class="yellow">IDEA.KG</span></div>
+		</div>
+	</div>
+	<div class="feature-wrap" id="feature">
+		<div class="container">
+			<div class="feature-in">
+				<h2 class="title">Если вы-</h2>
+				<div class="wrap">
+					<div class="left-side">
+						<ul class="features">
+							<li class="features__item"><i class="features__ic features__ic--money"></i><span>Хотите получать информацию <b>удобным для вас способом</b></span></li>
+							<li class="features__item"><i class="features__ic features__ic--clipboard"></i><span>Анализируете <b>вручную огромный  массив</b> информации</span></li>
+							<li class="features__item"><i class="features__ic features__ic--pros_cons"></i><span><b>Устали тратить время</b> на поиск новых контрактов</span></li>
+							<li class="features__item"><i class="features__ic features__ic--certif"></i><span>Работаете на рынке <b>государственных  закупок</b></span></li>
+						</ul>
+						<div class="info slogan-wrap arrow">
+							<div class="slogan"><span>Список можно продолжать очень долго. TenderSmart способен еще на больше</span></div>
+							<div class="shadow"></div>
+							<div class="shadow2"></div>
+						</div>
+
+					</div>
+					<div class="right-side">
+						<div class="appl-form">
+							<h3 class="appl-form__title">Оставьте свой номер, <br> мы расскажем вам еще больше</h3>
+							<form method="POST" id="appl_form" name="appl_form" class="appl-form__form needs-validation" novalidate>
+								<div class="form-group">
+									<label class="form-label username ic-user">
+										<input type="text" name="fio" id="fio" class="form-control" placeholder="Ваше имя" required>
+									</label>
+								</div>
+								<div class="form-group">
+									<label class="form-label userphone ic-user">
+										<input type="text" name="phone" id="phone" class="form-control send_user_phonef" required>
+									</label>
+								</div>
+								<div class="form-group">
+									<button type="submit" class="btn"><span class="button__blik">Отправить</span></button>
+								</div>
+							</form>
+							<div class="appl-form__footer">
+								<i class="line"></i>
+								<a href="tel:055499 01 15" class="appl-form__phone">0554 99 01 15</a>
+								<span class="appl-form__text">Ежедневно с 9.00 до 18.00</span>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<!-- Modal -->
-<div class="modal fade" id="appFormModal" tabindex="-1" role="dialog" aria-labelledby="appFormModal" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered" role="document">
-		<div class="appl-form">
-			<h3 class="appl-form__title">Оставьте свой номер, <br> мы расскажем вам еще больше</h3>
-			<form action="mail.php" method="POST" id="appl_form1" class="appl-form__form">
-				<div class="form-group">
-					<label class="form-label username ic-user">
-						<input type="text" name="user_name" class="form-control" placeholder="Ваше имя">
-					</label>
+	<div class="mission_wrap">
+		<div class="container">
+			<div class="mission">
+				<div class="mission-bl">
+					<h3 class="title">наша миссия</h3>
+					<h4 class="subtitle">Сделать поиск тендеров быстрым, удобным и современным</h4>
 				</div>
-				<div class="form-group">
-					<label class="form-label userphone ic-user">
-						<input type="text" name="user_phone" class="form-control" placeholder="Ваш телефон">
-					</label>
+				<div class="mission__in">
+					<div class="mission__capture">
+						<h2 class="title">
+							<span class='blue_text'>tender smart</span> собрал для вас <span class='highlighted'>весь смак</span>
+						</h2>
+						<div class="mission__description">
+							<span class="blue_text">Tender Smart</span> ежедневно мониторит все основные коммерческие и государственные торговые площадки и скачивает в свою базу все новые тендеры
+						</div>
+						<div class="mission__img">
+							<img src="upload/time_is_money.png" alt="time is money">
+						</div>
+						<div class="slogan-wrap">
+							<div class="slogan dollar">
+								<span>Наша платформа сохранит вам время, деньги и нервы</span>
+							</div>
+							<div class="shadow"></div>
+							<div class="shadow2"></div>
+						</div>
+					</div>
+					<ul class="mission__list">
+						<li class="mission__item research">
+							<h3 class="title">поиск тендеров</h3>
+							<span>Экономьте время на поиски государственных и коммерческих тендеров, используя фильтры и автопиоск</span>
+							<a href="#" class="ask_question">Задать вопрос</a>
+						</li>
+						<li class="mission__item bar_chart">
+							<h3 class="title">Аналитика рынка</h3>
+							<span>Анализируйте, изучайте историю тендеров заказчиков и конкурентов для оценки своих перспектив в нише</span>
+							<a href="#" class="ask_question">Задать вопрос</a>
+						</li>
+						<li class="mission__item profile">
+							<h3 class="title">Лента</h3>
+							<span>Настраивайте свою ленту по интересам и получайте решения, которые будут интересны именно вам</span>
+							<a href="#" class="ask_question">Задать вопрос</a>
+						</li>
+						<li class="mission__item resume">
+							<h3 class="title">CRM система</h3>
+							<span>Контролируйте свою команду, следите за эффективностью каждого сотрудника</span>
+							<a href="#" class="ask_question">Задать вопрос</a>
+						</li>
+						<li class="mission__item analytics">
+							<h3 class="title">Панель управления</h3>
+							<span>Получите мгновенное представление о ваших тендерных продажах</span>
+							<a href="#" class="ask_question">Задать вопрос</a>
+						</li>
+						<li class="mission__item bar_chart1">
+							<h3 class="title">Гибкие настройки</h3>
+							<span>Настраивайте права доступа для различных групп пользователей с учетом структуры вашей организации</span>
+							<a href="#" class="ask_question">Задать вопрос</a>
+						</li>
+					</ul>
 				</div>
-				<div class="form-group">
-					<button type="submit" name="submit" class="btn"><span class="button__blik">Отправить</span></button>
+				<div class="mission__footer">
+					<h3 class="title blue_text">Это только вершина айсберга</h3>
+					<span>Это лишь малая часть того что может <b>TenderSmart</b></span>
 				</div>
-			</form>
-			<div class="appl-form__footer">
-				<i class="line"></i>
-				<a href="tel:055499 01 15" class="appl-form__phone">0554 99 01 15</a>
-				<span class="appl-form__text">Ежедневно с 9.00 до 18.00</span>
 			</div>
 		</div>
 	</div>
-</div>
-<a class="to-top btn" id="to-top"></a>
+	<div class="steps-wrap steps-wrap--white" id="steps">
+		<div class="container">
+			<div class="steps">
+				<div class="steps-item steps-item--blue steps-item--f">
+					<p class="phrase quote">Если ты готов, а это означает, что у тебя есть образование и опыт, и ты нашел хорошую сделку, тогда деньги найдут тебя или ты найдешь деньги.</p>
+					<span class="footnote">© Роберт Кийосаки.</span>
+					<div class="ava"><div class="ava__pict"><img src="upload/kijosaki_robert.png" alt=""></div></div>
+				</div>
+				<div class="steps-item steps-item--transp steps-item--row steps-item--s magnet">
+					<span class="steps__num">01</span>
+					<div class="steps-item-wrap">
+						<h4 class="title steps-item__title">а что если</h4>
+						<p class="steps-item__text">Вы или ваша организация решила участвовать в тендере, но у вас недостаточно средств, или организация не хочет отвлекать значительные средства из оборота, то вы сможете обратиться за получением тендерного кредита к Нам.  Мы поможем вам решить финансовые вопросы!</p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#appFormModal"><span class="button__blik">Хочу узнать больше</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="steps-wrap steps-wrap--grey">
+		<div class="container">
+			<div class="steps">
+				<div class="steps-item steps-item--transp steps-item--row steps-item--t arrow elephant">
+					<span class="steps__num">02</span>
+					<div class="steps-item-wrap">
+						<h4 class="title steps-item__title">или</h4>
+						<p class="steps-item__text">У вас есть деньги и вы не знаете как их приумножить? У вас мало времени и полно забот, и вам хочется зарабатывать больше. Тогда Вам срочно нужно прийти к нам в офис. Мы с вами организуем выгодное сотрудничество, вам даже не придется тратить на это ваше время, мы все сделаем сами.  Мы ждем вас!</p>
+					</div>
+				</div>
+				<div class="steps-item steps-item--blue steps-item--fh">
+					<p class="steps-item__text quote">Деньги должны работать всегда! Они и работают, так или иначе. Даже сейчас, когда лежат на счете в банке, вложены в ценные бумаги, фонды, недвижимость или драгоценные металлы. Работают, даже будучи спрятанными под плинтусом или в стеклянной банке. Вопрос лишь в том, насколько хорошо они это делают, и как их заставить работать лучше. Гораздо лучше!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="phone-appl-wrap" id="appl">
+		<div class="container">
+			<div class="phone-appl-in">
+				<div class="phone-appl send-phone-appl">
+					<h3 class="phone-appl__title">Хотите перезвоним?</h3>
+					<div class="phone-appl__subtitle"><b>Заполните форму</b> - мы перезвоним в течении 5 минут и проконсультируем
+						Вас по всем вопросам</div>
+					<div class="phone-appl__text clock">С Пн по ПТ 9.00 - 18.00</div>
+					<form action="mail.php" method="POST" id="phone_appl_form" name="phone_appl_form" class="phone-appl__form">
+						<div class="form-group">
+							<label class="form-label ic-user username">
+								<input type="text" name="user_phone" class="form-control send_user_phone" placeholder="+ 996 (___)__ __ __">
+							</label>
+						</div>
+						<div class="form-group">
+							<button type="submit" name="submit" class="btn"><span class="button__blik">Отправить</span></button>
+						</div>
+					</form>
+				</div>
+				<div class="phone-appl call-phone">
+					<h3 class="phone-appl__title ic-phone">Либо звоните нам <br>напрямую прямо сейчас</h3>
+					<span class="phone-appl__item">Мы работаем</span>
+					<a href="tel:0555586358" class="phone-appl-num">+996 (554) 99 01 15</a>
+					<a href="tel:0555586358" class="phone-appl-num">+996 (706) 99 01 15</a>
+					<i class="line"></i>
+					<span class="mb-3px"><b>Или пишите нам</b></span>
+					<span class="phone-appl__item mb-18px">Мы онлайн</span>
+					<div class="phone-appl-msg">
+						<a href="https://api.whatsapp.com/send?phone=996554990115" class="phone-appl-msg__item phone-appl-wa">
+							<span class="whatsapp"></span><span>WhatsApp</span>
+						</a>
+						<a href="https://t.me/S_Sydyk" class="phone-appl-msg__item phone-appl-tl">
+							<span class="telegram"></span><span>Telegram</span>
+						</a>
+					</div>
+				</div>
+				<div class="phone-img"><img src="upload/smartphone_rot.png" alt="call us"></div>
+			</div>
+		</div>
+	</div>
+	<div class="spred-wrap" id="spred">
+		<div class="container">
+			<div class="spred">
+				<div class="spred-left">
+					<div class="spred-item">
+						<h4 class="title spred-item__title"></h4>
+						<p class="spred-item__text active" data-selected="1">Наша площадка позволяет просматривать все тендера, которые публикуются в Кыргызской Республике. Все Государственные, Частные (Procurement) и с частных компаний</p>
+						<p class="spred-item__text" data-selected="2">Тендера на определенные суммы бюджета, например, с 300 000 сом по 1 000 000 сом, т.е. минимальные тендера это с бюджетом на 300 000 сом, а максимальные 1 000 000 сом.</p>
+						<p class="spred-item__text" data-selected="3">Возможность находит тендера, по ключевым словам, т.е. показывать только те тендера, на которые вы ориентируетесь. Пример вам нужны тендера только по «генераторам» то вам будут показывать тендера, связанные с «генератором»</p>
+						<p class="spred-item__text" data-selected="4">Возможность сортировать и поиск тендеров по датам. С определенной даты по определенный, или же поиск/показ тендеров за: сегодняшний, вчерашний, за прошлую неделю и за последний месяц.</p>
+						<p class="spred-item__text" data-selected="5">Возможность перехода (ссылка) на сам тендер. Возможность перехода на сайт <a href="#www.zakupki.gov.kg" class="link-it">www.zakupki.gov.kg</a>, на страницу самого тендера.</p>
+						<p class="spred-item__text" data-selected="6">После объявления победителя конкурса (если сотрудник выиграл тендер), система позволяет загрузить договора.</p>
+						<p class="spred-item__text" data-selected="7">У каждого сотрудника есть свой "Портфель " где он сохраняет свои тендера, в которых он будет участвовать, так же при добавлении тендера может привязать несколько участников, т.е. за этот тендер отвечают несколько участников.</p>
+						<p class="spred-item__text" data-selected="8">Администраторы учреждений могут просматривать тендера своих сотрудников, в скольких они приняли участие, сколько выиграли</p>
+						<p class="spred-item__text" data-selected="9">Наша площадка позволяет просматривать все тендера, которые публикуются в Кыргызской Республике. Все Государственные, Частные (Procurement) и с частных компаний</p>
+					</div>
+					<form action="mail.php" method="POST" id="phone_appl_form_1" name="phone_appl_form_1" class="phone-appl__form">
+						<div class="form-group">
+							<label class="form-label ic-user username">
+								<input type="text" name="user_phone" class="form-control send_user_phone" placeholder="+ 996 (___)__ __ __">
+							</label>
+						</div>
+						<div class="form-group">
+							<button type="submit" name="submit" class="btn"><span class="button__blik">Хочу узнать больше</span></button>
+						</div>
+					</form>
+				</div>
+				<div class="spred-right">
+					<img class="spred-img" src="upload/Trading_Platforms_Hero_device_shot_Optimized.png" alt="trading platforms device">
+					<div class="spred-point">
+						<div class="spred-point-item active" data-selected="1"><div class="spred-point-item__out"><div class="spred-point-item__in"></div></div></div>
+						<div class="spred-point-item" data-selected="2"><div class="spred-point-item__out"><div class="spred-point-item__in"></div></div></div>
+						<div class="spred-point-item" data-selected="3"><div class="spred-point-item__out"><div class="spred-point-item__in"></div></div></div>
+						<div class="spred-point-item" data-selected="4"><div class="spred-point-item__out"><div class="spred-point-item__in"></div></div></div>
+						<div class="spred-point-item" data-selected="5"><div class="spred-point-item__out"><div class="spred-point-item__in"></div></div></div>
+						<div class="spred-point-item" data-selected="6"><div class="spred-point-item__out"><div class="spred-point-item__in"></div></div></div>
+						<div class="spred-point-item" data-selected="7"><div class="spred-point-item__out"><div class="spred-point-item__in"></div></div></div>
+						<div class="spred-point-item" data-selected="8"><div class="spred-point-item__out"><div class="spred-point-item__in"></div></div></div>
+						<div class="spred-point-item" data-selected="9"><div class="spred-point-item__out"><div class="spred-point-item__in"></div></div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer-wrap" id="contacts">
+		<div class="container">
+			<div class="footer">
+				<div class="footer-row">
+					<p class="footer-text footer-info">Tender Smart ежедневно мониторит все основные коммерческие и государственные торговые площадки и скачивает в свою базу все новые тендеры.</p>
+					<div class="line phone-line"></div>
+					<div class="footer-right">
+						<div class="footer-phone footer-text flex-center contact-ph">
+							<span class="footer-text contact-ic contact-ph__text">Телефон</span>
+							<a href="tel:0554990115" class="contact-ph__link">0554 99 01 15</a>
+							<a href="tel:0706990115" class="contact-ph__link">0706 99 01 15</a>
+						</div>
+						<div class="line phone-line"></div>
+						<div class="footer-email flex-center contact-email">
+							<span class="footer-text contact-ic">Email</span>
+							<a href="mailto:tendersmar@gmail.com" class="footer-email__text">tender.smart.kg@gmail.com</a>
+							<button type="button" class="btn mob-abs" data-toggle="modal" data-target="#appFormModal"><span class="button__blik">Обратный звонок</span></button>
+						</div>
+						<div class="line phone-line"></div>
+						<div class="footer-msg flex-center contact-msg">
+							<span class="footer-text contact-ic">Мы в социальных сетях:</span>
+							<ul class="msg-menu">
+								<li class="msg-menu__item"><a href="https://api.whatsapp.com/send?phone=996554990115"><span class="whatsapp"></span></a></li>
+								<li class="msg-menu__item"><a href="tg://msg?text=<?php echo urlencode( '<TEXT>' ); ?>&to=<PHONE>" class="telegram"></a></li>
+								<li class="msg-menu__item"><a href="https://www.instagram.com" class="instagram"></a></li>
+								<li class="msg-menu__item"><a href="https://www.facebook.com" class="facebook"></a></li>
+							</ul>
+							<div class="line phone-line"></div>
+							<button type="button" class="btn" data-toggle="modal" data-target="#sendFormModal"><span class="button__blik">14 дней бесплатно</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="line"></div>
+				<div class="footer-row develop-info">
+					<div>© 2020 Все права защищены.</div>
+					<div>Разработка сайта <span class="yellow">IDEA.KG</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="appFormModal" tabindex="-1" role="dialog" aria-labelledby="appFormModal" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="appl-form">
+					<h3 class="appl-form__title">Оставьте свой номер, <br> мы расскажем вам еще больше</h3>
+					<form method="POST" id="appl_form_1" name="appl_form_1" class="appl-form__form needs-validation" novalidate>
+						<div class="form-group">
+							<label class="form-label username ic-user">
+								<input type="text" name="fio" id="fio" class="form-control" placeholder="Ваше имя" required>
+							</label>
+						</div>
+						<div class="form-group">
+							<label class="form-label userphone ic-user">
+								<input type="text" name="phone" id="phone" class="form-control send_user_phonef" required>
+							</label>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn"><span class="button__blik">Отправить</span></button>
+						</div>
+					</form>
+					<div class="appl-form__footer">
+						<i class="line"></i>
+						<a href="tel:055499 01 15" class="appl-form__phone">0554 99 01 15</a>
+						<span class="appl-form__text">Ежедневно с 9.00 до 18.00</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="sendFormModal" tabindex="-1" role="dialog" aria-labelledby="sendFormModal" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="appl-form appl-form--sm h-auto" id="send_form_wrap">
+					<h3 class="appl-form__title">Пройдите регистрацию для получения доступа к возможностям системы</h3>
+					<form  method="POST" id="send_appl_form" name="send_appl_form" class="appl-form__form needs-validation" novalidate>
+						<div class="form-group">
+							<label class="form-label useremail ic-user">
+								<input type="email" name="email" id="email" class="form-control" placeholder="Ваш email" required aria-describedby="emailHelp">
+							</label>
+						</div>
+						<div class="form-group">
+							<label class="form-label userpass ic-user">
+								<input type="password" name="password" id="password" class="form-control" placeholder="Ваш пароль" pattern=".{6,20}" required>
+							</label>
+						</div>
+						<div class="form-group">
+							<label class="form-label username ic-user">
+								<input type="text" name="fio" id="fio" class="form-control" placeholder="Ваше имя" required>
+							</label>
+						</div>
+						<div class="form-group">
+							<label class="form-label userphone ic-user">
+								<input type="text" name="phone" id="phone" class="form-control send_user_phonef" required>
+							</label>
+						</div>
+						<div class="form-group">
+							<button class="btn" type="submit"  id="send_btn" data-toggle="modal"><span class="button__blik">Отправить</span></button>
+						</div>
+					</form>
+				</div>
+				<div class="appl-form appl-form--sm h-auto d-none" id="link_form">
+					<h3 class="appl-form__title ic-none">Вы успешно зарегистировались, у вас есть 7 дней для возможности оценить функционал системы. Для началы работы перейдите по ссылке</h3>
+					<div class="form-group">
+						<a href="https://www.tender-smart.com" class="btn"><span class="button__blik">www.tender-smart.com</span></a>
+					</div>
+					<div class="appl-form__footer">
+						<i class="line"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<a class="to-top btn" id="to-top"></a>
 </div>
 </body>
 </html>
