@@ -107,16 +107,16 @@ $phone-width-min: 320px
 	@media screen and (min-width: $phone-width)
 		@content
 =tablet-down
-	@media screen and (max-width: $tablet-width)
+	@media screen and (min-width: $tablet-width)
 		@content
 =medium-down
-	@media screen and (max-width: $medium-width)
+	@media screen and (min-width: $medium-width)
 		@content
 =large-down
-	@media screen and (max-width: $large-width)
+	@media screen and (min-width: $large-width)
 		@content
 =extra_large-down
-	@media screen and (max-width: $extra_large-width)
+	@media screen and (min-width: $extra_large-width)
 		@content
 
 =scroll-txt($height)

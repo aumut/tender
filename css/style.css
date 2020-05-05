@@ -89,6 +89,9 @@ h4 {
     .container {
       padding-left: 15px;
       padding-right: 15px; } }
+  @media screen and (min-width: 1024px) {
+    .container {
+      max-width: 1170px; } }
 
 .title {
   font-family: "BebasNeueRegular", sans-serif;
@@ -366,25 +369,6 @@ a.btn:hover {
 
 .d-none {
   display: none; }
-
-.msg {
-  display: none;
-  color: #000;
-  font-size: 12px;
-  line-height: 1; }
-
-.invalid {
-  color: red; }
-
-.valid {
-  color: green; }
-
-.invalid input:required:invalid {
-  background: #BE4C54; }
-
-/* Mark valid inputs during .invalid state */
-.invalid input:required:valid {
-  background: #17D654; }
 
 .modal-content {
   border: 0px;
